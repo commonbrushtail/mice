@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;500;600&display=swap');
+body{
+    margin: 0;
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .contentBox{
+        position: absolute;
+        z-index: 5;
+        top: 50px;
+    }
+    
+    .svgLine{
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+        background-color: gray;
+        
+       
+       
+        
+        .worldShadow{
+           
+           transform:translate(48px,245px);
+            
+        }
+
+        .travellerShadow{
+            
+            transform:translate(655px,858px);
+        }
+        .flagShadow{
+            transform: translate(0px,1603px);
+        }
+       
+    }
+    
+
+
+    
+}
