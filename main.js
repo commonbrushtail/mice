@@ -1,7 +1,39 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin);
-let worldShadow = document.querySelector(".worldShadow"),
-    contentBox = document.querySelector(".contentBox"),
-    delta = MotionPathPlugin.getRelativePosition(contentBox, worldShadow, [0.5, 0.5], [0.5, 0.5]);
+
+
+var worldShadow = document.querySelector(".worldShadow"),
+    travellerShadow = document.querySelector(".travellerShadow"),
+    flagShadow = document.querySelector(".flagShadow"),
+    contentBox1 = document.querySelector(".contentBox1"),
+    worldShadowTop,
+    travellerShadowTop, 
+    flagShadowShadowTop; 
+    
+
+
+function findPosition(){
+    worldShadowTop =  worldShadow.getBoundingClientRect().y + window.scrollY
+    travellerShadowTop =  travellerShadow.getBoundingClientRect().y + window.scrollY
+    flagShadowShadowTop =  flagShadow.getBoundingClientRect().y + window.scrollY
+        
+}
+
+
+
+
+
+
+function setPosition(){
+    gsap.set('.contentBox1',{
+        y: worldShadowTop 
+    })
+    gsap.set('.contentBox2',{
+        y: travellerShadowTop 
+    })
+    gsap.set('.contentBox3',{
+        y: flagShadowShadowTop 
+    })
+}
 
 
 
@@ -9,4 +41,13 @@ let worldShadow = document.querySelector(".worldShadow"),
 
 
 
-var tl = gsap.timeline()
+
+window.addEventListener('load', ()=>{
+    findPosition()
+    setPosition()
+});
+window.addEventListener('resize',()=>{
+    findPosition()
+    setPosition()
+});
+

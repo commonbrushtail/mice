@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;500;600&display=swap");
 @font-face {
   font-family: kanit-light;
@@ -41,6 +42,10 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+}
+
 body {
   margin: 0;
 }
@@ -56,6 +61,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .container .introBox {
@@ -100,12 +106,15 @@ body {
   width: max-content;
   margin: 0 auto;
   line-height: 1;
+  margin-bottom: 50px;
 }
 
 .container .svgLine {
   margin: 0 auto;
   width: 70%;
   height: 100%;
+  -webkit-transform: translateX(-9px);
+          transform: translateX(-9px);
 }
 
 .container .svgLine .object {
@@ -113,15 +122,6 @@ body {
   height: 100%;
   margin-top: 800px;
   position: relative;
-}
-
-.container .svgLine .object .contentBox {
-  margin-top: 400px;
-  margin-left: 800px;
-}
-
-.container .svgLine .object .contentBox h5 {
-  font-size: 41px;
 }
 
 .container .svgLine .worldShadow {
@@ -137,5 +137,271 @@ body {
 .container .svgLine .flagShadow {
   -webkit-transform: translate(0px, 1603px);
           transform: translate(0px, 1603px);
+}
+
+.container .contentBox {
+  position: absolute;
+}
+
+.container .contentBox1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container .contentBox1 .textWrap {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 250px;
+  padding-top: 50px;
+}
+
+.container .contentBox1 .textWrap .textWrapInner {
+  position: relative;
+}
+
+.container .contentBox1 .textWrap .textWrapInner h5 {
+  font-family: kanit-semiBold;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.container .contentBox1 .textWrap .textWrapInner h3 {
+  font-family: kanit-semiBold;
+  font-size: 105px;
+  color: #00FFC2;
+  margin-bottom: 10px;
+  line-height: 1;
+  text-align: left;
+}
+
+.container .contentBox1 .textWrap .textWrapInner h3 span {
+  font-size: 28px;
+  font-family: kanit-regular;
+  position: relative;
+  right: 15px;
+  text-align: left;
+}
+
+.container .contentBox1 .textWrap .textWrapInner p {
+  font-family: kanit-regular;
+  font-size: 28px;
+  color: white;
+  font-weight: 100;
+}
+
+.container .contentBox1 .textWrap .textWrapInner:after {
+  content: "";
+  background-image: url(../images/Export/Mice-bg_element01.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: -40%;
+  left: 50%;
+  -webkit-transform: translateX(-25%);
+          transform: translateX(-25%);
+}
+
+.container .contentBox1:before {
+  content: "";
+  width: 50%;
+}
+
+.container .contentBox2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container .contentBox2 .textWrap {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-top: 200px;
+  padding-right: 170px;
+}
+
+.container .contentBox2 .textWrap .textWrapInner {
+  position: relative;
+}
+
+.container .contentBox2 .textWrap .textWrapInner h5 {
+  font-family: kanit-semiBold;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+.container .contentBox2 .textWrap .textWrapInner h4 {
+  font-family: kanit-regular;
+  font-size: 28px;
+  color: white;
+  font-weight: 100;
+  margin-bottom: 0px;
+}
+
+.container .contentBox2 .textWrap .textWrapInner h3 {
+  font-family: kanit-semiBold;
+  font-size: 105px;
+  color: #00FFC2;
+  margin-bottom: 10px;
+  line-height: 1;
+  text-align: left;
+  position: relative;
+}
+
+.container .contentBox2 .textWrap .textWrapInner h3 span {
+  font-size: 28px;
+  font-family: kanit-regular;
+  position: relative;
+  right: 15px;
+  text-align: left;
+}
+
+.container .contentBox2 .textWrap .textWrapInner h3::after {
+  content: "คน";
+  font-size: 28px;
+  font-family: kanit-regular;
+  position: absolute;
+  bottom: -30px;
+  right: 5px;
+}
+
+.container .contentBox2 .textWrap .textWrapInner:after {
+  content: "";
+  background-image: url(../images/Export/Mice-bg_element02.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: -50%;
+  left: 100%;
+  -webkit-transform: translateX(-37%);
+          transform: translateX(-37%);
+}
+
+.container .contentBox2 .textWrap .textWrapInner:before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url(../images/Export/Mice-bg_element03.svg);
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  right: -200px;
+  top: 25px;
+  z-index: -1;
+}
+
+.container .contentBox2:after {
+  content: "";
+  width: 50%;
+}
+
+.container .contentBox3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.container .contentBox3 .textWrap {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 250px;
+  padding-top: 50px;
+}
+
+.container .contentBox3 .textWrap .textWrapInner {
+  position: relative;
+}
+
+.container .contentBox3 .textWrap .textWrapInner h5 {
+  font-family: kanit-semiBold;
+  font-size: 35px;
+  color: white;
+}
+
+.container .contentBox3 .textWrap .textWrapInner h3 {
+  font-family: kanit-semiBold;
+  font-size: 105px;
+  color: #00FFC2;
+  margin: 0;
+  line-height: 1;
+  text-align: left;
+}
+
+.container .contentBox3 .textWrap .textWrapInner h4 {
+  font-family: kanit-semiBold;
+  font-size: 70px;
+  color: #00FFC2;
+  font-weight: 100;
+  line-height: 1;
+}
+
+.container .contentBox3 .textWrap .textWrapInner h4 span {
+  font-family: kanit-regular;
+  font-size: 28px;
+}
+
+.container .contentBox3 .textWrap .textWrapInner:after {
+  content: "";
+  background-image: url(../images/Export/Mice-bg_element05.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 115%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.container .contentBox3 .textWrap .textWrapInner:before {
+  content: "";
+  background-image: url(../images/Export/Mice-bg_element06.svg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  right: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.container .contentBox3:before {
+  content: "";
+  width: 50%;
 }
 /*# sourceMappingURL=style.css.map */
