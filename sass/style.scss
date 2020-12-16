@@ -308,7 +308,7 @@ body{
            flex-direction: column;
            align-items: flex-start;
            padding-left: 250px;
-           padding-top: 50px;
+           padding-top: 450px;
            .textWrapInner{
                position: relative;
                h5{
@@ -357,13 +357,13 @@ body{
            }
            .textWrapInner:before{
             content: "";
-            background-image: url(../images/Export/Mice-bg_element06.svg);
+            background-image: url(../images/Export/Mice-bg_element04.svg);
             position: absolute;
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
-            right: 0;
-            transform: translateX(100%);
+            right: 150%;
+            
             
         }
   
