@@ -1,30 +1,127 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;400;500;600&display=swap");
+@font-face {
+  font-family: kanit-light;
+  src: url(../Kanit/Kanit-Light.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: kanit-extra-light;
+  src: url(../Kanit/Kanit-ExtraLight.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(../Kanit/Kanit-Thin.ttf);
+  font-family: kanit-thin;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(../Kanit/Kanit-Regular.ttf);
+  font-family: kanit-regular;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(../Kanit/Kanit-Medium.ttf);
+  font-family: kanit-medium;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  src: url(../Kanit/Kanit-SemiBold.ttf);
+  font-family: kanit-SemiBold;
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
 }
 
 .container {
   width: 100%;
+  height: 100%;
+  background-color: gray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.container .contentBox {
-  position: absolute;
-  z-index: 5;
-  top: 50px;
+.container .introBox {
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.container .introBox p {
+  font-size: 42px;
+  font-family: kanit-extra-light;
+  color: white;
+  text-align: center;
+  letter-spacing: 10px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.container .introBox img {
+  width: 80vw;
+  max-width: 830px;
+  margin-bottom: 30px;
+}
+
+.container .introBox span {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-family: kanit-regular;
+  margin-bottom: 30px;
+}
+
+.container .introBox div {
+  padding: 10px 35px;
+  border-radius: 10px;
+  color: #00FFC2;
+  background-color: #8924FC;
+  font-family: kanit-regular;
+  font-size: 28px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  line-height: 1;
 }
 
 .container .svgLine {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+}
+
+.container .svgLine .object {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
+  margin-top: 800px;
   position: relative;
-  background-color: gray;
+}
+
+.container .svgLine .object .contentBox {
+  margin-top: 400px;
+  margin-left: 800px;
+}
+
+.container .svgLine .object .contentBox h5 {
+  font-size: 50px;
 }
 
 .container .svgLine .worldShadow {
