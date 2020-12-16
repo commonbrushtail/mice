@@ -51,3 +51,17 @@ window.addEventListener('resize',()=>{
     setPosition()
 });
 
+
+    var action = gsap.timeline({defaults: {duration: 1},
+    scrollTrigger: {
+      trigger: ".svgLine",
+      scrub: true,
+      start: "top center",
+      end: "bottom center",
+      markers:true,
+    }})
+
+  .from("#pathLine", {drawSVG: 0}, 0)
+  .to(".pathBall", {motionPath: {path: "#pathLine", alignOrigin: [0.5, 0.5]}}, 0)
+
+  
