@@ -103,14 +103,19 @@ body{
     .svgLine{
         margin: 0 auto;
         width: 60%;
-        height: 140%;
+        
         transform: translateX(-9px);
         overflow: visible;
         
-        .graphic1{
+        .decoration{
         
-        transform:translate(0px,0px);
-    }
+        transform:translate(-180px,2300px);
+        
+        }
+
+        .decoration2{
+            transform:translate(-180px,2326.5px);
+        }
        
         .pathBall{
             z-index: 2;

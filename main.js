@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             endTrigger: ".contentBox3",
         }
     },"<")
-    
+    /*
     tl.to('.pathBall',{
         scale:10,
         fill:'white',
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             markers:true,
         }
     })
-    
+    */
 
 })
 
