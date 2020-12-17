@@ -114,9 +114,25 @@ body {
 .container .svgLine {
   margin: 0 auto;
   width: 60%;
-  height: 100%;
+  height: 140%;
   -webkit-transform: translateX(-9px);
           transform: translateX(-9px);
+  overflow: visible;
+}
+
+.container .svgLine .graphic1 {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.container .svgLine .pathBall {
+  z-index: 2;
+  position: relative;
+}
+
+.container .svgLine .pathLine {
+  position: relative;
+  z-index: 1;
 }
 
 .container .svgLine .object {
@@ -131,6 +147,13 @@ body {
           transform: translate(48px, 245px);
 }
 
+.container .svgLine .worldMaskInner {
+  -webkit-transform: translate(48px, 245px);
+          transform: translate(48px, 245px);
+  width: 518px;
+  height: 504px;
+}
+
 .container .svgLine .travellerShadow {
   -webkit-transform: translate(655px, 858px);
           transform: translate(655px, 858px);
@@ -139,6 +162,8 @@ body {
 .container .svgLine .flagShadow {
   -webkit-transform: translate(0px, 1603px);
           transform: translate(0px, 1603px);
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
 }
 
 .container .contentBox {
@@ -403,5 +428,22 @@ body {
 .container .contentBox3:before {
   content: "";
   width: 50%;
+}
+
+.section2 {
+  height: 100vh;
+  width: 100%;
+}
+
+.test1 {
+  width: 50px;
+  height: 80px;
+  background-color: red;
+}
+
+.test2 {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
 }
 /*# sourceMappingURL=style.css.map */
