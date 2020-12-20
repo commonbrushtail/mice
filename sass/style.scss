@@ -107,15 +107,16 @@ body{
         transform: translateX(-9px);
         overflow: visible;
         
-        .decoration{
-        
-        transform:translate(-180px,2300px);
-        
-        }
+       .decoration1{
+           transform: translate(-190px,-2016px);
+           visibility: hidden;
+       }
 
-        .decoration2{
-            transform:translate(-180px,2326.5px);
-        }
+       .ball02{
+        transform: translate(315px,2400px);
+      
+    }
+
        
         .pathBall{
             z-index: 2;
@@ -400,6 +401,8 @@ body{
         content: "";
         width: 50%;
     }
+
+    
     
 
     

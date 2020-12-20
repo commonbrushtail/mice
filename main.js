@@ -1,4 +1,4 @@
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin);
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin,MorphSVGPlugin);
 
 
 var worldShadow = document.querySelector(".worldShadow"),
@@ -50,8 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     
+    MorphSVGPlugin.convertToPath('.ball02') 
     
-    
+
+
+
     
     gsap.set('.pathBall',{
         motionPath:{
@@ -63,13 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
             
         }
     })
+
+    var action = gsap.timeline({
+        defaults: {
+          duration:5,
+          
+        }})
+    .to('.ball02',{morphSVG:'.decoration1',x:-190,y:-2016,fill:"url(#linear-gradient2"})   
+      
     
     
     
     
     var tl = gsap.timeline({
         defaults:{
-            duration:0.0001
+            duration:30
         },
         
         scrollTrigger:{
@@ -137,6 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
             endTrigger: ".contentBox3",
         }
     },"<")
+
+    tl.add(action,"-=4.5")
+
+
     /*
     tl.to('.pathBall',{
         scale:10,
@@ -150,8 +165,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
     */
+  
+   
 
 })
+
+
+
+
 
 
 

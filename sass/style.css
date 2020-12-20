@@ -119,14 +119,15 @@ body {
   overflow: visible;
 }
 
-.container .svgLine .decoration {
-  -webkit-transform: translate(-180px, 2300px);
-          transform: translate(-180px, 2300px);
+.container .svgLine .decoration1 {
+  -webkit-transform: translate(-190px, -2016px);
+          transform: translate(-190px, -2016px);
+  visibility: hidden;
 }
 
-.container .svgLine .decoration2 {
-  -webkit-transform: translate(-180px, 2326.5px);
-          transform: translate(-180px, 2326.5px);
+.container .svgLine .ball02 {
+  -webkit-transform: translate(315px, 2400px);
+          transform: translate(315px, 2400px);
 }
 
 .container .svgLine .pathBall {
