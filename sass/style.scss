@@ -46,20 +46,25 @@ $teal : #00FFC2;
 
 body{
     margin: 0;
+    
+    width: 100%;
 }
 
 
 .container{
     width: 100vw;
-    height: 100%;
+  
     max-width: 100%;
     background-color: gray;
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+   
+  
     .introBox{
-        
+        position: relative;
+        z-index: 3;
         margin: 0 auto;
         margin-top: 150px;
         p{
@@ -100,9 +105,13 @@ body{
         }
     }
     
+    
     .svgLine{
         margin: 0 auto;
         width: 60%;
+        position: relative;
+        z-index: 3;
+        
         
         transform: translateX(-9px);
         overflow: visible;
@@ -167,11 +176,16 @@ body{
             transform: translate(0px,1603px);
             filter: brightness(0);
         }
+        .whiteBall{
+            transform: translate(-540px,2660px) scale(1.2);
+            visibility: hidden;
+        }
        
     }
 
     .contentBox{
         position: absolute;
+        z-index: 3;
         
      }
      .contentBox1{
@@ -410,10 +424,84 @@ body{
 
     
 }
+.container:before{  
+    transform:translate(-50% -50%);
+    z-index: 1;
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,255,194);
+    background: linear-gradient(0deg, 
+    rgba(0,255,194,1) 0%, 
+    rgba(4,246,195,1) 17%, 
+    rgba(17,223,201,1) 35%, 
+    rgba(37,186,209,1) 53%, 
+    rgba(66,134,222,1) 70%, 
+    rgba(102,69,237,1) 84%, 
+    rgba(137,6,252,1) 100%);
+}
+.container:after{
+    z-index: 2;
+    content:"";
+    position: absolute;
+    height: 100%;
+    
+    width: 100%;
+    background: rgb(47,30,84);
+    background: linear-gradient(0deg, rgba(47,30,84,1) 0%, rgba(47,29,85,0.8) 34%, rgba(95,17,174,0.5) 65%, rgba(125,9,230,0.4) 81%, 
+    rgba(137,6,252,0.1) 90%);
+}
 
 .section2{
-    height: 100vh;
+    height: 200vh;
     width: 100%;
+    position: relative;
+    background-color: rgba(47,30,84,1) ;
+ 
+    .section2Ball{
+        width: 140%;
+        height: 800px;
+        background-color: $teal;
+        border-radius: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translate(calc(-50% + 1px),-50px)scale(0);
+        z-index: 6;
+    }
+   
+    h1{
+        color:white;
+        text-align: center;
+    }
+}
+
+.section2:before{
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    
+    
+
+
+}
+.section2:after{
+    content:"";
+    width: 130%;
+    height: 1700px;
+    background-color: $teal;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%)scale(0);
+   
+    z-index: 4;
+  
 }
 
 .test1{
