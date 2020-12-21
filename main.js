@@ -82,16 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     var tl = gsap.timeline({
-        onComplete:()=>{
-            gsap.to('.section2Ball',{
-                scale:1,
-                backgroundColor:'white',
-                
-                
-            },""
-                )
-        
-        },
+       
         defaults:{
             duration:30
         },
@@ -108,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     
     tl.to('.pathBall',{
-    
+        duration:25,
         motionPath:{
             path:'.pathLine',
             align:'.pathLine',
@@ -117,7 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     
     tl.from('.pathLine',{
-        drawSVG: 0
+        drawSVG: 0,
+        duration:25,
     },"<")
     
    
@@ -163,6 +155,19 @@ document.addEventListener('DOMContentLoaded', () => {
             endTrigger: ".contentBox3",
         }
     },"<")
+
+    tl.to('.section2Ball',{
+        scale:2,
+        scrollTrigger:{
+            markers:true,
+            trigger:'.section2',
+            start:"65 0+top bottom",
+            scrub:true,
+            
+        }
+    },"<+=5")
+
+  
 
    
  
