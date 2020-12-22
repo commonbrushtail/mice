@@ -1,7 +1,7 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin,MorphSVGPlugin,CSSRulePlugin);
 
 var containerBefore = CSSRulePlugin.getRule(".container:before"); //get the rule
-var section2Before = CSSRulePlugin.getRule(".section2:before"); //get the rule
+var section2InnerBefore = CSSRulePlugin.getRule(".section2Inner:before"); //get the rule
 var section2After = CSSRulePlugin.getRule(".section2:after"); //get the rule
 var worldShadow = document.querySelector(".worldShadow"),
     travellerShadow = document.querySelector(".travellerShadow"),
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     
-    MorphSVGPlugin.convertToPath('.ball02') 
+   
     MorphSVGPlugin.convertToPath('.pathBall') 
     
 
@@ -79,8 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
     
     
-    
-    
     var tl = gsap.timeline({
        
         defaults:{
@@ -90,16 +88,16 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger:{
         
             trigger:'.contentBox1',
-            start: '100+top bottom',
-            end:'-100top top',
+            start: 'bottom bottom',
+            end:'bottom top',
             scrub:true,
-            endTrigger:".section2",
-            markers:true,
+            endTrigger:".container",
+            
         }
     })
     
     tl.to('.pathBall',{
-        duration:25,
+        duration:30,
         motionPath:{
             path:'.pathLine',
             align:'.pathLine',
@@ -109,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     tl.from('.pathLine',{
         drawSVG: 0,
-        duration:25,
+        duration:30,
     },"<")
     
    
@@ -156,29 +154,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     },"<")
 
-    tl.to('.section2Ball',{
-        scale:2,
-        scrollTrigger:{
-            markers:true,
-            trigger:'.section2',
-            start:"65 0+top bottom",
-            scrub:true,
-            
-        }
-    },"<+=5")
-
-  
-
-   
- 
-   
-    
     tl.add(action,"-=4.5")
 
-    
+   
     
 
-    
+    var section2tl = gsap.timeline()
+    section2tl.to('.section2InnerDeco',{
+        scale:1,
+        background: 'rgb(0,255,194)',
+        background: 'linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(255,255,255,1) 84%)',
+        borderBottomLeftRadius: 0,
+        borderBottomRightRadius: 0,
+        y:0,
+        scrollTrigger:{
+            trigger:'.section2Inner',
+            start:"top center",
+           
+            end:'50px +240+center',
+            scrub:true,
+            markers:true,
+        }
+    })
+    section2tl.to('.section2Inner .textWrap',{
+        opacity:1,
+        scrollTrigger:{
+            trigger:'.section2Inner',
+            start:"top center",
+           
+            end:'120px +240+center',
+            scrub:true,
+            markers:true,
+        }
+    })
+
     
     
   
