@@ -22,26 +22,28 @@ function findPosition(){
 
 function setPosition(){
     gsap.set('.contentBox1',{
-        immediateRender:true,
+       
         y: worldShadowTop 
     })
     gsap.set('.contentBox2',{
-        immediateRender:true,
+       
         y: travellerShadowTop 
     })
     gsap.set('.contentBox3',{
-        immediateRender:true,
+       
         y: flagShadowShadowTop 
     })
 }
 
-window.addEventListener('load', ()=>{
+window.addEventListener('DOMContentLoaded', ()=>{
     findPosition()
     setPosition()
+    ScrollTrigger.refresh()
 });
-window.addEventListener('resize',()=>{
+window.addEventListener('onResize',()=>{
     findPosition()
     setPosition()
+    ScrollTrigger.refresh();
 });
 
 
@@ -173,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
            
             end:'50px +240+center',
             scrub:true,
-            markers:true,
+          
         }
     })
     section2tl.to('.section2Inner .textWrap',{
@@ -184,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
            
             end:'120px +240+center',
             scrub:true,
-            markers:true,
+           
         }
     })
 
