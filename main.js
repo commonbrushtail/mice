@@ -231,7 +231,21 @@ MotionPathHelper.create(".pathBall",{
 })
 
 */
+/*
 
-
-
-
+gsap.fromTo('.lineDecoration',{
+    repeat:-1,
+    
+    yoyo:true,
+    background: 'rgb(0,255,194)',
+    background: 'linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 9%, rgba(17,223,201,1) 18%, rgba(37,186,209,1) 35%, rgba(66,134,222,1) 58%, rgba(102,69,237,1) 82%, rgba(137,6,252,1) 100%)'
+},{
+    background: 'rgb(0,255,194)',
+    background: 'linear-gradient(0deg, rgba(0,255,194,1) 15%, rgba(4,246,195,1) 30%, rgba(17,223,201,1) 45%, rgba(37,186,209,1) 60%, rgba(66,134,222,1) 75%, rgba(102,69,237,1) 90%, rgba(137,6,252,1) 100%)',
+    repeat:-1,
+    duration:5,
+    ease:'power2',
+    
+    
+})
+*/

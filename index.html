@@ -141,7 +141,7 @@
         </div>
         <div class="videoWrap2">
             <h3>ก่อนผลกระทบจาก COVID-19 <span>จะทำให้อุตสาหกกรมไมซ์เติบโตลดลงต่อเนื่อง</span></h3>
-            <video muted platsinline loop preload autoplay>
+            <video muted platsinline  preload autoplay>
                 <source src="drive-download-20201222T091331Z-001/video2.mp4" type="video/mp4">
             </video>
             </div>
@@ -182,13 +182,13 @@
 
     <div class="section5">
         <div class="lineDescription">
-            <div class="lineItem flexStart">
+            <div class="lineItem justifyFlexStart">
                 <p>ตลาดในประเทศ</p>
-                <div style="background-color: #0CEAB5;" class="line"></div>
+                <div style="background-color: #8906FC;" class="line"></div>
             </div>
             <div class="lineItem">
                 <p>ตลาดต่างประเทศ</p>
-                <div style="background-color: #8906FC;" class="line"></div>
+                <div style="background-color: #0CEAB5;" class="line"></div>
             </div>
         </div>
 
@@ -197,6 +197,47 @@
             <video muted platsinline loop preload autoplay>
                 <source src="drive-download-20201222T091331Z-001/video3.mp4" type="video/mp4">
             </video>
+        </div>
+
+    </div>
+
+    <div class="section6">
+        <h3 class="mainText"><span> ตลาดไมซ์ทั้งจากไทยและต่างประเทศ </span>
+           <span>  ล้วนมีส่วนสำคัญในการกระตุ้นเม็ดเงิน</span>
+            <span> สู่ระบบเศรษฐกิจ</span>
+        </h3>
+        <div class="lineDescription">
+            <div class="lineItem alignFlexStart">
+                <h3>82%</h3>
+                <p>ตลาดในประเทศ</p>
+                <div style="background-color: #8906FC;" class="line"></div>
+            </div>
+            <div class="lineItem">
+                <h3>18%</h3>
+                <p>ตลาดต่างประเทศ</p>
+                <div style="background-color: #0CEAB5;" class="line"></div>
+            </div>
+        </div>
+        <canvas id="canvas" width="400" height="300">
+        </canvas>
+        <div class="ballDecoration">
+
+
+        </div>
+        
+    </div>
+    <div class="section7">
+        <div class="lineDecoration"></div>
+        <div class="mainText">
+            <div class="textItem">
+                <h3>แล้วเม็ด</h3>
+                <h4>แต่ละประเภท</h4>
+            </div>
+
+            <div class="textItem textItem2">
+                <h3>เงินจาก</h3>
+                <h4>มีที่มาอย่างไร</h4>
+            </div>
         </div>
 
     </div>
@@ -214,6 +255,66 @@
     <script src="gsap/MotionPathHelper.min.js"></script>
     <script src="gsap/MorphSVGPlugin.min.js"></script>
     <script src="gsap/CSSRulePlugin.min.js"></script>
+    <script src="three.js-master/build/three.min.js"></script>
+    <script>
+
+var camera, scene, renderer;
+var mesh;
+
+init();
+animate();
+
+function init() {
+
+renderer = new THREE.WebGLRenderer({alpha:true,antialias:true,canvas: document.querySelector("#canvas")});
+
+
+camera = new THREE.PerspectiveCamera(70, 1, 1, 100);
+camera.position.z = 25;
+
+
+scene = new THREE.Scene();
+var geometry = new THREE.SphereGeometry(11, 100,100);
+var material  = new THREE.MeshLambertMaterial();
+
+THREE.ImageUtils.crossOrigin = '';
+material.map = THREE.ImageUtils.loadTexture('images/Export/world-pattern_high.jpg')
+
+  mesh = new THREE.Mesh(geometry, material);
+  mesh.rotation.x -=0.6;
+  mesh.rotation.z += 0;
+
+  scene.add(mesh);
+
+  var light1 = new THREE.SpotLight( 0xffffff );
+  light1.intensity = 1.6;
+  light1.position.set(5, 40, 25);
+
+  scene.add(light1);
+  
+}
+
+function resize() {
+  var width = renderer.domElement.clientWidth;
+  var height = renderer.domElement.clientHeight;
+  renderer.setSize(width, height, false);
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix(); 
+}
+
+function animate() {
+  resize();
+  mesh.rotation.y += 0.0010;
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
+}
+
+
+
+
+
+
+    </script>
     <script src="main.js"></script>
 </body>
 </html>
