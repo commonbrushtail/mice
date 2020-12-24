@@ -1,4 +1,4 @@
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin,MorphSVGPlugin,CSSRulePlugin);
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin,MorphSVGPlugin,CSSRulePlugin,ScrambleTextPlugin);
 
 var containerBefore = CSSRulePlugin.getRule(".container:before"); //get the rule
 var section2InnerBefore = CSSRulePlugin.getRule(".section2Inner:before"); //get the rule
@@ -38,164 +38,353 @@ function setPosition(){
 window.addEventListener('DOMContentLoaded', ()=>{
     findPosition()
     setPosition()
-    ScrollTrigger.refresh()
+    
 });
 window.addEventListener('onResize',()=>{
     findPosition()
     setPosition()
-    ScrollTrigger.refresh();
+    
 });
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    findPosition()
-    setPosition()
-    
-    
-    
-   
-    MorphSVGPlugin.convertToPath('.pathBall') 
-    
 
 
 
-    
-    gsap.set('.pathBall',{
-        motionPath:{
-            path:'.pathLine',
-            align:'.pathLine',
-            alignOrigin: [0.5, 0.5],
-            start:0,
-            end:0,
-            
-        }
-    })
-
-    var action = gsap.timeline({
-        defaults: {
-          duration:5,
-          
-        }})
-    .to('.ball02',{morphSVG:'.decoration1',x:-190,y:-2016,}) 
-      
-    
-    
-    var tl = gsap.timeline({
-       
-        defaults:{
-            duration:30
-        },
-        
-        scrollTrigger:{
-        
-            trigger:'.contentBox1',
-            start: 'bottom bottom',
-            end:'bottom top',
-            scrub:true,
-            endTrigger:".container",
-            
-        }
-    })
-    
-    tl.to('.pathBall',{
-        duration:30,
-        motionPath:{
-            path:'.pathLine',
-            align:'.pathLine',
-            alignOrigin: [0.5, 0.5],
-        }
-    })
-    
-    tl.from('.pathLine',{
-        drawSVG: 0,
-        duration:30,
-    },"<")
-    
-   
-
-    tl.fromTo('.worldShadow',{
-        opacity:0
-    },{
-        opacity:'100%',
-        scrollTrigger:{
-        
-            trigger:'.contentBox1',
-            start: 'bottom bottom',
-            end:'top top',
-            scrub:true,
-            endTrigger: ".contentBox2",
-        }
-    },"<")
-
-    tl.fromTo('.travellerShadow',{
-        opacity:0
-    },{
-        opacity:'100%',
-        scrollTrigger:{
-           
-            trigger:'.contentBox2',
-            start: 'bottom bottom',
-            end:'-120+top top',
-            scrub:true,
-            endTrigger: ".contentBox3",
-        }
-    },"<")
-
-    tl.fromTo('.flagShadow',{
-        opacity:0
-    },{
-        opacity:'100%',
-        scrollTrigger:{
-       
-            trigger:'.contentBox3',
-            start: 'bottom bottom',
-            end:'top -450+top',
-            scrub:true,
-            endTrigger: ".contentBox3",
-        }
-    },"<")
-
-    tl.add(action,"-=4.5")
-
-   
+MorphSVGPlugin.convertToPath('.pathBall') 
     
 
-    var section2tl = gsap.timeline()
-    section2tl.to('.section2InnerDeco',{
-        scale:1,
-        background: 'rgb(0,255,194)',
-        background: 'linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(255,255,255,1) 84%)',
-        borderBottomLeftRadius: 0,
-        borderBottomRightRadius: 0,
-        y:0,
-        scrollTrigger:{
-            trigger:'.section2Inner',
-            start:"top center",
-           
-            end:'50px +240+center',
-            scrub:true,
-          
-        }
-    })
-    section2tl.to('.section2Inner .textWrap',{
-        opacity:1,
-        scrollTrigger:{
-            trigger:'.section2Inner',
-            start:"top center",
-           
-            end:'120px +240+center',
-            scrub:true,
-           
-        }
-    })
-
-    
-    
   
-   
+ScrollTrigger.matchMedia({
+    "(min-width:1200px) and (min-height:900px)":()=>{
+        
+        gsap.set('.pathBall',{
+            motionPath:{
+                path:'.pathLine',
+                align:'.pathLine',
+                alignOrigin: [0.5, 0.5],
+                start:0,
+                end:0,
+                
+            }
+        })
+        var tl = gsap.timeline({
+           
+            defaults:{
+                duration:30
+            },
+            
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'top center',
+                end:'bottom-=300 top',
+                scrub:true,
+                endTrigger:".container",
+                markers:true,
+                
+                
+            }
+        })
+        
+        tl.to('.pathBall',{
+            duration:20,
+            motionPath:{
+                path:'.pathLine',
+                align:'.pathLine',
+                alignOrigin: [0.5, 0.5],
+            }
+        })
+        
+        tl.fromTo('.pathLine',{
+            drawSVG: '0% 0%',
+            
+        },{drawSVG:'100% 0%',duration:20,},"<")
+        
+       
+    
+        tl.fromTo('.worldShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'bottom bottom',
+                end:'top top',
+                scrub:true,
+                endTrigger: ".contentBox2",
+            }
+        },"<")
+    
+        tl.fromTo('.travellerShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+               
+                trigger:'.contentBox2',
+                start: 'bottom bottom',
+                end:'-120+top top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+    
+        tl.fromTo('.flagShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+           
+                trigger:'.contentBox3',
+                start: 'bottom bottom',
+                end:'top -450+top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+
+        return function() {
+            tl.kill(); 
+            // other cleanup code can go here. 
+          };
+    
+       
+    
+    },
+
+    "(min-width:1200px)":()=>{
+        console.log('asdads')
+        gsap.set('.pathBall',{
+            motionPath:{
+                path:'.pathLine',
+                align:'.pathLine',
+                alignOrigin: [0.5, 0.5],
+                start:0,
+                end:0,
+                
+            }
+        })
+        var tl = gsap.timeline({
+           
+            defaults:{
+                duration:30
+            },
+            
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'top bottom',
+                end:'bottom-=300 top',
+                scrub:true,
+                endTrigger:".container",
+                
+                
+            }
+        })
+        
+        tl.to('.pathBall',{
+            duration:20,
+            motionPath:{
+                path:'.pathLine',
+                align:'.pathLine',
+                alignOrigin: [0.5, 0.5],
+            }
+        })
+        
+        tl.fromTo('.pathLine',{
+            drawSVG: '0% 0%',
+            
+        },{drawSVG:'100% 0%',duration:20,},"<")
+        
+       
+    
+        tl.fromTo('.worldShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'bottom bottom',
+                end:'top top',
+                scrub:true,
+                endTrigger: ".contentBox2",
+            }
+        },"<")
+    
+        tl.fromTo('.travellerShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+               
+                trigger:'.contentBox2',
+                start: 'bottom bottom',
+                end:'-120+top top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+    
+        tl.fromTo('.flagShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+           
+                trigger:'.contentBox3',
+                start: 'bottom bottom',
+                end:'top -450+top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+
+        return function() {
+            tl.kill(); 
+            // other cleanup code can go here. 
+          };
+    
+       
+    
+    },
+    "(max-width:1199.99px)":()=>{
+        gsap.set('.pathBall1200',{
+            motionPath:{
+                path:'.pathLine1200',
+                align:'.pathLine1200',
+                alignOrigin: [0.5, 0.5],
+                start:0,
+                end:0,
+                
+            }
+        })
+        var tl = gsap.timeline({
+           
+            defaults:{
+                duration:30
+            },
+            
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'bottom bottom',
+                end:'bottom-=300 top',
+                scrub:true,
+                endTrigger:".container",
+                
+                
+            }
+        })
+        
+        tl.to('.pathBall1200',{
+            duration:20,
+            motionPath:{
+                path:'.pathLine1200',
+                align:'.pathLine1200',
+                alignOrigin: [0.5, 0.5],
+            }
+        })
+        
+        tl.fromTo('.pathLine1200',{
+            drawSVG: '0% 0%',
+            
+        },{drawSVG:'100% 0%',duration:20,},"<")
+        
+       
+    
+        tl.fromTo('.worldShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'bottom bottom',
+                end:'top top',
+                scrub:true,
+                endTrigger: ".contentBox2",
+            }
+        },"<")
+    
+        tl.fromTo('.travellerShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+               
+                trigger:'.contentBox2',
+                start: 'bottom bottom',
+                end:'-120+top top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+    
+        tl.fromTo('.flagShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+           
+                trigger:'.contentBox3',
+                start: 'bottom bottom',
+                end:'top -450+top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+    
+        
+        return function() {
+            tl.kill(); 
+            // other cleanup code can go here. 
+          };
+    }
 
 })
+
+
+
+
+
+
+
+
+var section2tl = gsap.timeline()
+section2tl.to('.section2InnerDeco',{
+    onComplete:()=>{
+
+    },
+    scale:1,
+    background: 'rgb(0,255,194)',
+    background: 'linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(255,255,255,1) 84%)',
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    y:0,
+    scrollTrigger:{
+        trigger:'.section2Inner',
+        start:"top center",
+       
+        end:'50px +240+center',
+        scrub:true,
+      
+    }
+})
+section2tl.to('.section2Inner .textWrap',{
+    opacity:1,
+    scrollTrigger:{
+        trigger:'.section2Inner',
+        start:"top center",
+       
+        end:'120px +240+center',
+        scrub:true,
+       
+    }
+})
+
 
 
 
@@ -217,7 +406,31 @@ gsap.fromTo(containerBefore,
 
 );
 
+
+gsap.fromTo('.section9',
+    {
+    background: "rgb(0,255,194)",
+    background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
+    repeat:-1,
+ 
+    
+},
+    {
+        background: "rgb(0,255,194)",
+        background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
+        repeat:-1,
+        duration:8,
+        ease: "none"
+    }
+
+);
+
+gsap.to('.count', {ease:'none',duration:2, scrambleText:{text:"212,837", chars:"0123456789XX",speed:1,}})
+
+
+
 /*
+
 MotionPathHelper.create(".pathBall",{
   path: ".pathLine",
   pathWidth: 5,
