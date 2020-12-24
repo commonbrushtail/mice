@@ -56,8 +56,8 @@ MorphSVGPlugin.convertToPath('.pathBall')
 
   
 ScrollTrigger.matchMedia({
-    "(min-width:1200px) and (min-height:900px)":()=>{
-        
+    "(min-width:1200px)and(min-height:900px)":()=>{
+        console.log('asdadasdasds')
         gsap.set('.pathBall',{
             motionPath:{
                 path:'.pathLine',
@@ -77,11 +77,10 @@ ScrollTrigger.matchMedia({
             scrollTrigger:{
             
                 trigger:'.contentBox1',
-                start: 'top center',
+                start: 'top bottom',
                 end:'bottom-=300 top',
                 scrub:true,
                 endTrigger:".container",
-                markers:true,
                 
                 
             }
@@ -405,7 +404,7 @@ gsap.fromTo(containerBefore,
     }
 
 );
-
+/*
 
 gsap.fromTo('.section9',
     {
@@ -425,6 +424,7 @@ gsap.fromTo('.section9',
 
 );
 
+*/
 gsap.to('.count', {ease:'none',duration:2, scrambleText:{text:"212,837", chars:"0123456789XX",speed:1,}})
 
 

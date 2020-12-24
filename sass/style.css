@@ -641,6 +641,7 @@ body {
 .section3 .videoWrap h3 {
   width: 81%;
   margin: 30px auto;
+  margin-bottom: 0;
   color: #8924FC;
   font-family: kanit-medium;
   font-size: 35px;
