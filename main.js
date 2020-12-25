@@ -82,7 +82,6 @@ ScrollTrigger.matchMedia({
                 end:'bottom-=300 center+=50',
                 scrub:true,
                 endTrigger:".container",
-                markers:true,
                 
                 
             }
