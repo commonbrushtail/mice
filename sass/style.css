@@ -189,6 +189,10 @@ body {
 .container .contentBox {
   position: absolute;
   z-index: 3;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: hidden;
 }
 
 .container .contentBox1 {
@@ -250,17 +254,14 @@ body {
   font-weight: 100;
 }
 
-.container .contentBox1 .textWrap .textWrapInner:after {
+.container .contentBox1 .textWrap:before {
   content: "";
-  background-image: url(../images/Export/Mice-bg_element01.svg);
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: relative;
+  background-image: url(/images/Export/Mice-bg_element01.svg);
+  width: 120px;
+  height: 80px;
   background-repeat: no-repeat;
-  top: -40%;
-  left: 50%;
-  -webkit-transform: translateX(-25%);
-          transform: translateX(-25%);
+  left: 220px;
 }
 
 .container .contentBox1:before {
@@ -275,6 +276,16 @@ body {
   width: 100%;
 }
 
+.container .contentBox2 .textWrap:before {
+  content: "";
+  background-image: url(/images/Export/Mice-bg_element02.svg);
+  width: 150px;
+  height: 50px;
+  background-repeat: no-repeat;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
 .container .contentBox2 .textWrap {
   width: 50%;
   display: -webkit-box;
@@ -287,8 +298,9 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding-top: 200px;
   padding-right: 170px;
+  position: relative;
+  z-index: 2;
 }
 
 .container .contentBox2 .textWrap .textWrapInner {
@@ -338,28 +350,19 @@ body {
   right: 5px;
 }
 
-.container .contentBox2 .textWrap .textWrapInner:after {
+.container .contentBox2 .textWrap:after {
   content: "";
-  background-image: url(../images/Export/Mice-bg_element02.svg);
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  background-image: url(/images/Export/Mice-bg_element03.svg);
+  width: 350px;
+  height: 350px;
   background-repeat: no-repeat;
-  top: -50%;
-  left: 100%;
-  -webkit-transform: translateX(-37%);
-          transform: translateX(-37%);
-}
-
-.container .contentBox2 .textWrap .textWrapInner:before {
-  content: "";
-  background-repeat: no-repeat;
-  background-image: url(../images/Export/Mice-bg_element03.svg);
-  width: 100%;
-  height: 200%;
-  position: absolute;
-  right: -200px;
-  top: 25px;
+  background-position: center;
+  background-size: cover;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  bottom: 300px;
+  left: 120px;
   z-index: -1;
 }
 
@@ -388,7 +391,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   padding-left: 250px;
-  padding-top: 450px;
+  padding-top: 480px;
 }
 
 .container .contentBox3 .textWrap .textWrapInner {
@@ -423,27 +426,25 @@ body {
   font-size: 28px;
 }
 
-.container .contentBox3 .textWrap .textWrapInner:after {
+.container .contentBox3 .textWrap:after {
   content: "";
-  background-image: url(../images/Export/Mice-bg_element05.svg);
-  position: absolute;
+  background-image: url(/images/Export/Mice-bg_element05.svg);
+  background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  background-repeat: no-repeat;
-  right: 0;
-  top: 115%;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  position: relative;
+  left: 400px;
+  top: 20px;
 }
 
-.container .contentBox3 .textWrap .textWrapInner:before {
+.container .contentBox3 .textWrap:before {
   content: "";
-  background-image: url(../images/Export/Mice-bg_element04.svg);
-  position: absolute;
-  width: 30px;
-  height: 100%;
+  background-image: url(/images/Export/Mice-bg_element04.svg);
   background-repeat: no-repeat;
-  right: 300%;
+  width: 50px;
+  height: 200px;
+  position: absolute;
+  left: 20%;
 }
 
 .container .contentBox3:before {
@@ -722,8 +723,9 @@ body {
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
-  width: 65%;
+  width: 100%;
   margin: 0 auto;
+  display: none;
 }
 
 .section4 .miceWrap .miceItem {
@@ -818,6 +820,7 @@ body {
   background: -webkit-gradient(linear, left bottom, left top, from(#00ffc2), color-stop(84%, white));
   background: linear-gradient(0deg, #00ffc2 0%, white 84%);
   z-index: 9;
+  display: none;
 }
 
 .section6 .mainText {
@@ -929,6 +932,7 @@ body {
 }
 
 .section7 {
+  display: none;
   position: relative;
   z-index: 11;
   background: #0b0714;
@@ -1009,6 +1013,7 @@ body {
   -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 40px 0;
+  overflow: hidden;
 }
 
 .section7 .gridContainer .gridItemImage img {
@@ -1176,6 +1181,7 @@ body {
   background: #00ffc2;
   background: -webkit-gradient(linear, left bottom, left top, from(#00ffc2), color-stop(15%, #06f3c4), color-stop(37%, #18d3cc), color-stop(59%, #349fd8), color-stop(79%, #5c57e8), to(#8906fc));
   background: linear-gradient(0deg, #00ffc2 0%, #06f3c4 15%, #18d3cc 37%, #349fd8 59%, #5c57e8 79%, #8906fc 100%);
+  display: none;
 }
 
 .section9 .worldIcon {
@@ -1247,8 +1253,8 @@ body {
   text-align: right;
 }
 
-@media (min-width: 1200px) {
-  .pathLine1200, .pathBall1200 {
+@media (min-width: 1201px) {
+  .pathLine1200, .pathBall1200, .pathLine768, .pathBall768 {
     opacity: 0;
   }
   .pathBall, .pathLine {
@@ -1260,20 +1266,266 @@ body {
   .svgLine {
     width: 987px !important;
   }
-  .svgLine .pathLine, .svgLine .pathBall {
+  .svgLine .pathLine, .svgLine .pathBall, .svgLine .pathLine768, .svgLine .pathBall768 {
     opacity: 0;
   }
   .svgLine .pathBall1200, .svgLine .pathLine1200 {
     opacity: 100;
   }
+  .svgLine .decoration1 {
+    -webkit-transform: translate(-190px, -1800px) !important;
+            transform: translate(-190px, -1800px) !important;
+  }
+  .svgLine .decoration2 {
+    -webkit-transform: translate(-190px, -1800px) !important;
+            transform: translate(-190px, -1800px) !important;
+  }
   .contentBox1 .textWrap {
-    padding-left: 150px !important;
+    padding-left: 180px !important;
   }
   .contentBox2 .textWrap {
-    padding-right: 150px !important;
+    padding-right: 100px !important;
+  }
+  .contentBox2 .textWrap:before {
+    margin-bottom: 30px !important;
   }
   .contentBox3 .textWrap {
-    padding-left: 150px !important;
+    padding-left: 100px !important;
+  }
+}
+
+@media (max-width: 986px) {
+  .svgLine {
+    width: 768px !important;
+  }
+  .svgLine .decoration1 {
+    -webkit-transform: translate(-190px, -1600px) !important;
+            transform: translate(-190px, -1600px) !important;
+  }
+  .svgLine .decoration2 {
+    -webkit-transform: translate(-190px, -1600px) !important;
+            transform: translate(-190px, -1600px) !important;
+  }
+  .pathLine, .pathBall, .pathLine1200, .pathBall1200 {
+    opacity: 0 !important;
+  }
+  .pathBall768, .pathLine768 {
+    opacity: 100 !important;
+  }
+  .contentBox .textWrap .textWrapInner h5 {
+    font-size: 20px !important;
+  }
+  .contentBox .textWrap .textWrapInner h3 {
+    font-size: 80px !important;
+  }
+  .contentBox .textWrap .textWrapInner h3 span {
+    font-size: 28px !important;
+  }
+  .contentBox .textWrap .textWrapInner p {
+    font-size: 20px !important;
+  }
+  .contentBox .textWrap .textWrapInner h4 {
+    font-size: 28px !important;
+  }
+  .contentBox1 .textWrap {
+    padding-left: 100px !important;
+  }
+  .contentBox1 .textWrap:before {
+    left: 150px !important;
+  }
+  .contentBox2 .textWrap {
+    padding-right: 80px !important;
+  }
+  .contentBox2 .textWrap:before {
+    margin-bottom: 30px !important;
+  }
+  .contentBox3 .textWrap {
+    padding-left: 100px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .svgLine {
+    width: 400px !important;
+    height: 2000px;
+  }
+  .svgLine .pathLine1200, .svgLine .pathBall1200, .svgLine .pathLine768, .svgLine .pathBall768, .svgLine .pathBall, .svgLine .pathLine {
+    opacity: 0 !important;
+  }
+  .svgLine .pathBallMobile {
+    opacity: 100 !important;
+  }
+  .svgLine .pathLineMobile {
+    opacity: 100 !important;
+  }
+  .svgLine .worldShadow {
+    -webkit-transform: translate(215px, -815px) scale(1.3) !important;
+            transform: translate(215px, -815px) scale(1.3) !important;
+  }
+  .svgLine .travellerShadow {
+    -webkit-transform: translate(296px, 563px) scale(1.4) !important;
+            transform: translate(296px, 563px) scale(1.4) !important;
+  }
+  .svgLine .flagShadow {
+    -webkit-transform: translate(188px, 2094px) scale(1.1) !important;
+            transform: translate(188px, 2094px) scale(1.1) !important;
+  }
+  .svgLine .decoration1, .svgLine .decoration2 {
+    -webkit-transform: translate(-190px, -800px) !important;
+            transform: translate(-190px, -800px) !important;
+  }
+  .container .contentBox .textWrap {
+    width: 100%;
+  }
+  .container .contentBox .textWrap .textWrapInner h5 {
+    font-size: 25px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner h3 {
+    font-size: 70px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner h3 span {
+    font-size: 25px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner p {
+    font-size: 25px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner h4 {
+    font-size: 25px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox1 .textWrap {
+    padding-top: 280px;
+    padding-left: 0 !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    width: 100%;
+    display: block;
+  }
+  .container .contentBox1 .textWrap .textWrapInner {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .container .contentBox1 .textWrap .textWrapInner h3 {
+    margin-left: 50px !important;
+  }
+  .container .contentBox1 .textWrap .textWrapInner h3 span {
+    margin-left: 10px !important;
+  }
+  .container .contentBox1 .textWrap .textWrapInner p {
+    margin-left: 70px !important;
+    position: relative;
+  }
+  .container .contentBox1 .textWrap .textWrapInner p strong {
+    position: relative;
+    display: block;
+    top: 0px;
+    left: 117px;
+  }
+  .container .contentBox1 .textWrap:before {
+    position: absolute;
+    top: 250px;
+    left: initial !important;
+    right: 5% !important;
+  }
+  .container .contentBox2 .textWrap {
+    padding-top: 350px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    width: 100%;
+    display: block;
+  }
+  .container .contentBox2 .textWrap .textWrapInner {
+    width: 85%;
+    overflow: visible;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
+    margin-bottom: 100px;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h3 {
+    margin-left: 0px !important;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h3 span {
+    margin-left: 0px !important;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h3:after {
+    display: block;
+    position: relative !important;
+    bottom: 0px !important;
+    right: 0 !important;
+    left: 235px;
+  }
+  .container .contentBox2 .textWrap:before {
+    position: absolute;
+    top: 230px;
+    left: 8.5% !important;
+    height: 30px !important;
+    width: 100px !important;
+    background-size: contain;
+  }
+  .container .contentBox2 .textWrap:after {
+    position: absolute;
+    top: 300px;
+    width: 200px;
+    height: 200px;
+    left: 200px;
+  }
+  .container .contentBox3 .textWrap {
+    padding-top: 170px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    width: 100%;
+    display: block;
+  }
+  .container .contentBox3 .textWrap .textWrapInner {
+    width: 85%;
+    overflow: visible;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
+  }
+  .container .contentBox3 .textWrap .textWrapInner h3 {
+    margin-left: 0px !important;
+  }
+  .container .contentBox3 .textWrap .textWrapInner h3 span {
+    margin-left: 0px !important;
+  }
+  .container .contentBox3 .textWrap .textWrapInner h3:after {
+    display: block;
+    position: relative !important;
+    bottom: 0px !important;
+    right: 0 !important;
+    left: 235px;
+  }
+  .container .contentBox3 .textWrap:before {
+    content: none !important;
+  }
+  .container .contentBox3 .textWrap:after {
+    content: none !important;
+  }
+  .container .contentBox1:before {
+    content: none !important;
+  }
+  .container .contentBox2:after {
+    content: none !important;
+  }
+  .container .contentBox3:before {
+    content: none !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
