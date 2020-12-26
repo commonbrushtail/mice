@@ -35,11 +35,14 @@ function setPosition(){
     })
 }
 
-window.addEventListener('DOMContentLoaded', ()=>{
-    findPosition()
-    setPosition()
+
+
+
+findPosition()
+setPosition()
+
     
-});
+
 window.addEventListener('resize',()=>{
     findPosition()
     setPosition()
@@ -104,8 +107,8 @@ ScrollTrigger.matchMedia({
         },"<")
 
     },
-    "(min-width:1201px) and (min-height:1201px)" :()=>{
-        console.log('1201 and 1200')
+    "(min-width:1921px)" :()=>{
+        console.log('4k')
        /*for 1080p screen*/
         gsap.set('.pathBall',{
             motionPath:{
@@ -162,9 +165,9 @@ ScrollTrigger.matchMedia({
        
     
     },
-    "(min-width:1201px) and (max-height:1200px)" :()=>{
-        console.log('1201 and 900')
-       /*for 1080p screen*/
+    "(min-width:1441px) and (max-width:1920px)" :()=>{
+        console.log('1080p')
+      
         gsap.set('.pathBall',{
             motionPath:{
                 path:'.pathLine',
@@ -218,8 +221,8 @@ ScrollTrigger.matchMedia({
        
     
     },
-    "(min-width:1201px) and (max-height:1401px)":()=>{
-        console.log('1201 active')
+    "(min-width:1201px) and (max-width:1440px)":()=>{
+        console.log('hdpi')
         /*for hdpi laptop*/
         gsap.set('.pathBall',{
             motionPath:{
@@ -273,8 +276,8 @@ ScrollTrigger.matchMedia({
        
     
     },
-    "(max-width:1200px) and (min-width:987px)":()=>{
-        console.log('under 1366')
+    "(min-width:987px) and (max-width:1200px)":()=>{
+        console.log('under 1200')
         gsap.set('.pathBall1200',{
             motionPath:{
                 path:'.pathLine1200',
@@ -325,7 +328,7 @@ ScrollTrigger.matchMedia({
             // other cleanup code can go here. 
           };
     },
-    "(max-width:986px) and (min-height:500px)":()=>{
+    "(min-width:768px) and (max-width:986px)":()=>{
         console.log('under 986')
         gsap.set('.pathBall768',{
             motionPath:{
@@ -380,7 +383,7 @@ ScrollTrigger.matchMedia({
           };
     },
     "(max-width:768px) and (min-width:400.1px)":()=>{
-        
+        console.log('under768')
         gsap.set('.pathBallMobile',{
             motionPath:{
                 path:'.pathLineMobile',
@@ -476,7 +479,7 @@ ScrollTrigger.matchMedia({
           };
     },
     "(max-width:400px)":()=>{
-        
+        console.log('under400')
         gsap.set('.pathBallMobile320',{
             motionPath:{
                 path:'.pathLineMobile320',
@@ -589,9 +592,7 @@ ScrollTrigger.matchMedia({
 
 var section2tl = gsap.timeline()
 section2tl.to('.section2InnerDeco',{
-    onComplete:()=>{
-
-    },
+    
     scale:1,
     
     borderBottomLeftRadius: 0,
@@ -616,7 +617,23 @@ section2tl.to('.section2Inner .textWrap',{
         scrub:true,
        
     }
-})
+},'<')
+
+section2tl.to('.count', {
+    ease:'none',duration:2, 
+    scrambleText:{text:"212,837", chars:"0123456789",speed:1,},
+    scrollTrigger:{
+        trigger:'.section2Inner',
+        start:"top-=400 center",
+       
+        end:'150px +240+center',
+        scrub:true,
+        
+       
+    }
+},'<')
+
+
 
 
 
@@ -638,7 +655,7 @@ gsap.fromTo(containerBefore,
     }
 
 );
-/*
+
 
 gsap.fromTo('.section9',
     {
@@ -658,8 +675,6 @@ gsap.fromTo('.section9',
 
 );
 
-*/
-gsap.to('.count', {ease:'none',duration:2, scrambleText:{text:"212,837", chars:"0123456789XX",speed:1,}})
 
 /*
 MotionPathHelper.create(".pathBallMobile",{
