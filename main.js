@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     setPosition()
     
 });
-window.addEventListener('onResize',()=>{
+window.addEventListener('resize',()=>{
     findPosition()
     setPosition()
     
@@ -57,6 +57,53 @@ MorphSVGPlugin.convertToPath('.pathBall')
   
 ScrollTrigger.matchMedia({
 
+    "(min-width:768px)":()=>{
+       
+        gsap.fromTo('.worldShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'bottom bottom',
+                end:'top top',
+                scrub:true,
+                endTrigger: ".contentBox2",
+            }
+        },"<")
+    
+        gsap.fromTo('.travellerShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+               
+                trigger:'.contentBox2',
+                start: 'top bottom',
+                end:'bottom top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+                
+            }
+        },"<")
+    
+        gsap.fromTo('.flagShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+           
+                trigger:'.contentBox3',
+                start: 'center bottom',
+                end:'top top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+               
+            }
+        },"<")
+
+    },
     "(min-width:1201px) and (min-height:1201px)" :()=>{
         console.log('1201 and 1200')
        /*for 1080p screen*/
@@ -105,49 +152,7 @@ ScrollTrigger.matchMedia({
         
        
     
-        tl.fromTo('.worldShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-            
-                trigger:'.contentBox1',
-                start: 'bottom bottom',
-                end:'top top',
-                scrub:true,
-                endTrigger: ".contentBox2",
-            }
-        },"<")
-    
-        tl.fromTo('.travellerShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-               
-                trigger:'.contentBox2',
-                start: 'top bottom',
-                end:'bottom top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-                
-            }
-        },"<")
-    
-        tl.fromTo('.flagShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-           
-                trigger:'.contentBox3',
-                start: 'center bottom',
-                end:'top top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-               
-            }
-        },"<")
+       
 
         return function() {
             tl.kill(); 
@@ -204,50 +209,7 @@ ScrollTrigger.matchMedia({
         
        
     
-        tl.fromTo('.worldShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-            
-                trigger:'.contentBox1',
-                start: 'bottom bottom',
-                end:'top top',
-                scrub:true,
-                endTrigger: ".contentBox2",
-            }
-        },"<")
-    
-        tl.fromTo('.travellerShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-               
-                trigger:'.contentBox2',
-                start: 'top bottom',
-                end:'bottom top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-                
-            }
-        },"<")
-    
-        tl.fromTo('.flagShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-           
-                trigger:'.contentBox3',
-                start: 'center bottom',
-                end:'top top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-               
-            }
-        },"<")
-
+       
         return function() {
             tl.kill(); 
             // other cleanup code can go here. 
@@ -302,48 +264,6 @@ ScrollTrigger.matchMedia({
         },{drawSVG:'100% 0%',duration:20,},"<")
         
        
-    
-        tl.fromTo('.worldShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-            
-                trigger:'.contentBox1',
-                start: 'bottom bottom',
-                end:'top top',
-                scrub:true,
-                endTrigger: ".contentBox2",
-            }
-        },"<")
-    
-        tl.fromTo('.travellerShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-               
-                trigger:'.contentBox2',
-                start: 'bottom bottom',
-                end:'-120+top top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
-    
-        tl.fromTo('.flagShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-           
-                trigger:'.contentBox3',
-                start: 'bottom bottom',
-                end:'top -450+top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
 
         return function() {
             tl.kill(); 
@@ -353,7 +273,7 @@ ScrollTrigger.matchMedia({
        
     
     },
-    "(max-width:1366px) and (max-height:1366px)":()=>{
+    "(max-width:1200px) and (min-width:987px)":()=>{
         console.log('under 1366')
         gsap.set('.pathBall1200',{
             motionPath:{
@@ -399,55 +319,13 @@ ScrollTrigger.matchMedia({
         
        
     
-        tl.fromTo('.worldShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-            
-                trigger:'.contentBox1',
-                start: 'bottom bottom',
-                end:'top top',
-                scrub:true,
-                endTrigger: ".contentBox2",
-            }
-        },"<")
-    
-        tl.fromTo('.travellerShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-               
-                trigger:'.contentBox2',
-                start: 'bottom bottom',
-                end:'-120+top top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
-    
-        tl.fromTo('.flagShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-           
-                trigger:'.contentBox3',
-                start: 'bottom bottom',
-                end:'top -450+top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
-    
         
         return function() {
             tl.kill(); 
             // other cleanup code can go here. 
           };
     },
-    "(max-width:986px) and (min-height:1000px)":()=>{
+    "(max-width:986px) and (min-height:500px)":()=>{
         console.log('under 986')
         gsap.set('.pathBall768',{
             motionPath:{
@@ -493,49 +371,7 @@ ScrollTrigger.matchMedia({
         
        
     
-        tl.fromTo('.worldShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-            
-                trigger:'.contentBox1',
-                start: 'top bottom',
-                end:'center bottom',
-                scrub:true,
-                endTrigger:".container",
-                markers:true,
-
-            }
-        },"<")
     
-        tl.fromTo('.travellerShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-               
-                trigger:'.contentBox2',
-                start: 'bottom bottom',
-                end:'-120+top top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
-    
-        tl.fromTo('.flagShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-           
-                trigger:'.contentBox3',
-                start: 'bottom bottom',
-                end:'top -450+top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
     
         
         return function() {
@@ -638,7 +474,106 @@ ScrollTrigger.matchMedia({
             tl.kill(); 
             // other cleanup code can go here. 
           };
+    },
+    "(max-width:400px)":()=>{
+        
+        gsap.set('.pathBallMobile320',{
+            motionPath:{
+                path:'.pathLineMobile320',
+                align:'.pathLineMobile320',
+                alignOrigin: [0.5, 0.5],
+                start:0,
+                end:0,
+                
+            }
+        })
+        var tl = gsap.timeline({
+           
+            defaults:{
+                duration:30
+            },
+            
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'bottom bottom',
+                end:'bottom-=300 top',
+                scrub:true,
+                endTrigger:".container",
+                
+                
+            }
+        })
+        
+        tl.to('.pathBallMobile320',{
+            duration:20,
+            motionPath:{
+                path:'.pathLineMobile320',
+                align:'.pathLineMobile320',
+                alignOrigin: [0.5, 0.5],
+            }
+        })
+        
+        tl.fromTo('.pathLineMobile320',{
+            drawSVG: '0% 0%',
+            
+        },{drawSVG:'100% 0%',duration:20,},"<")
+        
+       
+    
+        tl.fromTo('.worldShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+            
+                trigger:'.contentBox1',
+                start: 'top bottom',
+                end:'center bottom',
+                scrub:true,
+                endTrigger:".container",
+                markers:true,
+
+            }
+        },"<")
+    
+        tl.fromTo('.travellerShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+               
+                trigger:'.contentBox2',
+                start: 'bottom bottom',
+                end:'-120+top top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+    
+        tl.fromTo('.flagShadow',{
+            opacity:0
+        },{
+            opacity:'100%',
+            scrollTrigger:{
+           
+                trigger:'.contentBox3',
+                start: 'bottom bottom',
+                end:'top -450+top',
+                scrub:true,
+                endTrigger: ".contentBox3",
+            }
+        },"<")
+    
+        
+        return function() {
+            tl.kill(); 
+            // other cleanup code can go here. 
+          };
     }
+
+
+    
 
     
 
@@ -761,3 +696,16 @@ gsap.fromTo('.lineDecoration',{
 })
 */
 
+gsap.to('.gradient1,.decoration1',{
+ 
+  attr:{  gradientTransform:"translate(-325.25 2915.14) rotate(360)"},
+  scrollTrigger:{
+      trigger:'.decoration1',
+      markers:true,
+      start:'top bottom',
+      endTrigger:'.section2',
+      end:'center bottom',
+      scrub:true,
+      
+  }
+})

@@ -84,7 +84,7 @@ body {
 
 .container .introBox img {
   width: 80vw;
-  max-width: 830px;
+  max-width: 750px;
   margin-bottom: 30px;
 }
 
@@ -143,6 +143,10 @@ body {
   z-index: 1;
 }
 
+.container .svgLine .pathLineMobile, .container .svgLine .pathBallMobile, .container .svgLine .pathLineMobile320, .container .svgLine .pathBallMobile320 {
+  opacity: 0 !important;
+}
+
 .container .svgLine .object {
   width: 100%;
   height: 100%;
@@ -193,6 +197,11 @@ body {
   height: -moz-max-content;
   height: max-content;
   overflow: hidden;
+}
+
+.container .contentBox .shadowText {
+  display: inline;
+  text-shadow: 2px 1px 3px rgba(0, 255, 76, 0.65);
 }
 
 .container .contentBox1 {
@@ -1345,34 +1354,53 @@ body {
 }
 
 @media (max-width: 767px) {
-  .svgLine {
+  .container .introBox {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .introBox p {
+    font-size: 25px;
+  }
+  .container .introBox img {
+    width: 70vw;
+  }
+  .container .svgLine {
     width: 400px !important;
     height: 2000px;
   }
-  .svgLine .pathLine1200, .svgLine .pathBall1200, .svgLine .pathLine768, .svgLine .pathBall768, .svgLine .pathBall, .svgLine .pathLine {
+  .container .svgLine .pathLine1200, .container .svgLine .pathBall1200, .container .svgLine .pathLine768, .container .svgLine .pathBall768, .container .svgLine .pathBall, .container .svgLine .pathLine {
     opacity: 0 !important;
   }
-  .svgLine .pathBallMobile {
+  .container .svgLine .pathBallMobile {
     opacity: 100 !important;
   }
-  .svgLine .pathLineMobile {
+  .container .svgLine .pathLineMobile {
     opacity: 100 !important;
   }
-  .svgLine .worldShadow {
+  .container .svgLine .worldShadow {
     -webkit-transform: translate(215px, -815px) scale(1.3) !important;
             transform: translate(215px, -815px) scale(1.3) !important;
   }
-  .svgLine .travellerShadow {
+  .container .svgLine .travellerShadow {
     -webkit-transform: translate(296px, 563px) scale(1.4) !important;
             transform: translate(296px, 563px) scale(1.4) !important;
   }
-  .svgLine .flagShadow {
+  .container .svgLine .flagShadow {
     -webkit-transform: translate(188px, 2094px) scale(1.1) !important;
             transform: translate(188px, 2094px) scale(1.1) !important;
   }
-  .svgLine .decoration1, .svgLine .decoration2 {
-    -webkit-transform: translate(-190px, -800px) !important;
-            transform: translate(-190px, -800px) !important;
+  .container .svgLine .decoration1, .container .svgLine .decoration2 {
+    -webkit-transform: translate(-170px, -800px) !important;
+            transform: translate(-170px, -800px) !important;
   }
   .container .contentBox .textWrap {
     width: 100%;
@@ -1394,7 +1422,7 @@ body {
     margin: 0 !important;
   }
   .container .contentBox .textWrap .textWrapInner h4 {
-    font-size: 25px !important;
+    font-size: 60px !important;
     margin: 0 !important;
   }
   .container .contentBox1 .textWrap {
@@ -1453,6 +1481,10 @@ body {
     display: block;
     margin-bottom: 100px;
   }
+  .container .contentBox2 .textWrap .textWrapInner h4 {
+    font-size: 25px !important;
+    line-height: 1;
+  }
   .container .contentBox2 .textWrap .textWrapInner h3 {
     margin-left: 0px !important;
   }
@@ -1480,6 +1512,193 @@ body {
     width: 200px;
     height: 200px;
     left: 200px;
+  }
+  .container .contentBox3 {
+    padding-bottom: 50px;
+  }
+  .container .contentBox3 .textWrap {
+    padding-top: 170px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    width: 100%;
+    display: block;
+  }
+  .container .contentBox3 .textWrap .textWrapInner {
+    width: 85%;
+    overflow: visible;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
+  }
+  .container .contentBox3 .textWrap .textWrapInner h3 {
+    margin-left: 0px !important;
+  }
+  .container .contentBox3 .textWrap .textWrapInner h3 span {
+    margin-left: 0px !important;
+  }
+  .container .contentBox3 .textWrap .textWrapInner h3:after {
+    display: block;
+    position: relative !important;
+    bottom: 0px !important;
+    right: 0 !important;
+    left: 235px;
+  }
+  .container .contentBox3 .textWrap .textWrapInner h4 span {
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 235px;
+  }
+  .container .contentBox3 .textWrap:before {
+    content: none !important;
+  }
+  .container .contentBox3 .textWrap:after {
+    content: none !important;
+  }
+  .container .contentBox1:before {
+    content: none !important;
+  }
+  .container .contentBox2:after {
+    content: none !important;
+  }
+  .container .contentBox3:before {
+    content: none !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .container .svgLine {
+    width: 320px !important;
+  }
+  .container .svgLine .pathLine1200, .container .svgLine .pathBall1200, .container .svgLine .pathLine768, .container .svgLine .pathBall768, .container .svgLine .pathBall, .container .svgLine .pathLine, .container .svgLine .pathBallMobile, .container .svgLine .pathLineMobile {
+    opacity: 0 !important;
+  }
+  .container .svgLine .pathLineMobile320, .container .svgLine .pathBallMobile320 {
+    opacity: 100 !important;
+  }
+  .container .contentBox .textWrap {
+    width: 100%;
+  }
+  .container .contentBox .textWrap .textWrapInner h5 {
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner h3 {
+    font-size: 60px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner h3 span {
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner p {
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner h4 {
+    font-size: 45px !important;
+    margin: 0 !important;
+  }
+  .container .contentBox .textWrap .textWrapInner h4 span {
+    font-size: 20px !important;
+    left: 180px !important;
+    bottom: -15px !important;
+  }
+  .container .contentBox1 .textWrap {
+    padding-top: 280px;
+    padding-left: 0 !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    width: 100%;
+    display: block;
+  }
+  .container .contentBox1 .textWrap .textWrapInner {
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .container .contentBox1 .textWrap .textWrapInner h3 {
+    margin-left: 50px !important;
+  }
+  .container .contentBox1 .textWrap .textWrapInner h3 span {
+    margin-left: 10px !important;
+  }
+  .container .contentBox1 .textWrap .textWrapInner p {
+    margin-left: 70px !important;
+    position: relative;
+  }
+  .container .contentBox1 .textWrap .textWrapInner p strong {
+    position: relative;
+    display: block;
+    top: 0px;
+    left: 117px;
+  }
+  .container .contentBox1 .textWrap:before {
+    position: absolute;
+    top: 250px;
+    left: initial !important;
+    right: 5% !important;
+  }
+  .container .contentBox2 .textWrap {
+    padding-top: 300px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative !important;
+    width: 100%;
+    display: block;
+  }
+  .container .contentBox2 .textWrap .textWrapInner {
+    width: 85%;
+    overflow: visible;
+    margin: 0 auto;
+    height: 100%;
+    display: block;
+    margin-bottom: 100px;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h5 {
+    line-height: 1;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h4 {
+    line-height: 1;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h3 {
+    margin-left: 0px !important;
+    line-height: 1;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h3 span {
+    margin-left: 0px !important;
+  }
+  .container .contentBox2 .textWrap .textWrapInner h3:after {
+    display: block;
+    position: relative !important;
+    bottom: 0px !important;
+    right: 0 !important;
+    left: 207px;
+    font-size: 20px;
+  }
+  .container .contentBox2 .textWrap:before {
+    position: absolute;
+    top: 180px;
+    left: 8.5% !important;
+    height: 30px !important;
+    width: 100px !important;
+    background-size: contain;
+  }
+  .container .contentBox2 .textWrap:after {
+    position: absolute;
+    top: 200px;
+    width: 200px;
+    height: 200px;
+    left: 150px;
   }
   .container .contentBox3 .textWrap {
     padding-top: 170px !important;
@@ -1516,15 +1735,6 @@ body {
     content: none !important;
   }
   .container .contentBox3 .textWrap:after {
-    content: none !important;
-  }
-  .container .contentBox1:before {
-    content: none !important;
-  }
-  .container .contentBox2:after {
-    content: none !important;
-  }
-  .container .contentBox3:before {
     content: none !important;
   }
 }
