@@ -428,49 +428,7 @@ ScrollTrigger.matchMedia({
         
        
     
-        tl.fromTo('.worldShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-            
-                trigger:'.contentBox1',
-                start: 'top bottom',
-                end:'center bottom',
-                scrub:true,
-                endTrigger:".container",
-            
-
-            }
-        },"<")
-    
-        tl.fromTo('.travellerShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-               
-                trigger:'.contentBox2',
-                start: 'bottom bottom',
-                end:'-120+top top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
-    
-        tl.fromTo('.flagShadow',{
-            opacity:0
-        },{
-            opacity:'100%',
-            scrollTrigger:{
-           
-                trigger:'.contentBox3',
-                start: 'bottom bottom',
-                end:'top -450+top',
-                scrub:true,
-                endTrigger: ".contentBox3",
-            }
-        },"<")
+     
     
         
         return function() {
