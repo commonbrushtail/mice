@@ -620,7 +620,7 @@ section2tl.to('.section2Inner .textWrap',{
 })
 
 
-/*
+
 
 gsap.fromTo(containerBefore,
     {
