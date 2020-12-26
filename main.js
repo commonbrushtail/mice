@@ -379,7 +379,7 @@ ScrollTrigger.matchMedia({
             // other cleanup code can go here. 
           };
     },
-    "(max-width:767px)":()=>{
+    "(max-width:767px) and (min-width:400.1px)":()=>{
         
         gsap.set('.pathBallMobile',{
             motionPath:{
