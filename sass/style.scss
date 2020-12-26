@@ -114,6 +114,7 @@ body{
         transform: translateX(-9px);
         overflow: visible;
         max-width: 100%;
+        visibility: hidden;
         
        .decoration1{
            transform: translate(-190px,-2016px);
@@ -196,6 +197,7 @@ body{
         z-index: 3;
         height: max-content;
         overflow: hidden;
+        visibility: hidden;
         .shadowText{
             display: inline;
             text-shadow: 2px 1px 3px rgba(0, 255, 76, 0.65);

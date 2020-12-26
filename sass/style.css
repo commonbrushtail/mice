@@ -121,6 +121,7 @@ body {
           transform: translateX(-9px);
   overflow: visible;
   max-width: 100%;
+  visibility: hidden;
 }
 
 .container .svgLine .decoration1 {
@@ -198,6 +199,7 @@ body {
   height: -moz-max-content;
   height: max-content;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .container .contentBox .shadowText {
