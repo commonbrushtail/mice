@@ -266,7 +266,7 @@ body {
 .container .contentBox1 .textWrap:before {
   content: "";
   position: relative;
-  background-image: url(images//Export/Mice-bg_element01.svg);
+  background-image: url("../images//Export/Mice-bg_element01.svg");
   width: 120px;
   height: 80px;
   background-repeat: no-repeat;
@@ -287,7 +287,7 @@ body {
 
 .container .contentBox2 .textWrap:before {
   content: "";
-  background-image: url(images//Export/Mice-bg_element02.svg);
+  background-image: url("../images//Export/Mice-bg_element02.svg");
   width: 150px;
   height: 50px;
   background-repeat: no-repeat;
@@ -361,7 +361,7 @@ body {
 
 .container .contentBox2 .textWrap:after {
   content: "";
-  background-image: url(images//Export/Mice-bg_element03.svg);
+  background-image: url("../images//Export/Mice-bg_element03.svg");
   width: 350px;
   height: 350px;
   background-repeat: no-repeat;
@@ -437,7 +437,7 @@ body {
 
 .container .contentBox3 .textWrap:after {
   content: "";
-  background-image: url(images//Export/Mice-bg_element05.svg);
+  background-image: url("../images//Export/Mice-bg_element05.svg");
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
@@ -448,7 +448,7 @@ body {
 
 .container .contentBox3 .textWrap:before {
   content: "";
-  background-image: url(images//Export/Mice-bg_element04.svg);
+  background-image: url("../images//Export/Mice-bg_element04.svg");
   background-repeat: no-repeat;
   width: 50px;
   height: 200px;
