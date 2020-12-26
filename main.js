@@ -379,7 +379,7 @@ ScrollTrigger.matchMedia({
             // other cleanup code can go here. 
           };
     },
-    "(max-width:767px) and (min-width:400.1px)":()=>{
+    "(max-width:768px) and (min-width:400.1px)":()=>{
         
         gsap.set('.pathBallMobile',{
             motionPath:{
@@ -593,8 +593,7 @@ section2tl.to('.section2InnerDeco',{
 
     },
     scale:1,
-    background: 'rgb(0,255,194)',
-    background: 'linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(255,255,255,1) 84%)',
+    
     borderBottomLeftRadius: 0,
     borderBottomRightRadius: 0,
     y:0,
