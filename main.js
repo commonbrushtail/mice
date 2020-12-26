@@ -436,7 +436,7 @@ ScrollTrigger.matchMedia({
                 end:'center bottom',
                 scrub:true,
                 endTrigger:".container",
-                markers:true,
+            
 
             }
         },"<")
@@ -532,8 +532,7 @@ ScrollTrigger.matchMedia({
                 end:'center bottom',
                 scrub:true,
                 endTrigger:".container",
-                markers:true,
-
+              
             }
         },"<")
     
@@ -701,7 +700,7 @@ gsap.to('.gradient1,.decoration1',{
   attr:{  gradientTransform:"translate(-325.25 2915.14) rotate(360)"},
   scrollTrigger:{
       trigger:'.decoration1',
-      markers:true,
+   
       start:'top bottom',
       endTrigger:'.section2',
       end:'center bottom',
