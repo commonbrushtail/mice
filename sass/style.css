@@ -44,6 +44,9 @@
 
 * {
   margin: 0;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 body {
