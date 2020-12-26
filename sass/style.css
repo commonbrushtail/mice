@@ -44,9 +44,6 @@
 
 * {
   margin: 0;
-  -webkit-perspective: 1000;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 body {
@@ -457,7 +454,7 @@ body {
   width: 50px;
   height: 200px;
   position: absolute;
-  left: 20%;
+  left: -270px;
 }
 
 .container .contentBox3:before {
