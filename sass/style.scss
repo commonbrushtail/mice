@@ -2781,31 +2781,44 @@ body {-webkit-transform:translate3d(0,0,0);}
 
         .contentBox1{
             .textWrap{
-                padding-top: 0px;
-                padding-left: 0!important;
-                align-items: center;
+                padding-top: 40px;
+                padding-left: 0px!important;
                 position: relative!important;
                 width: 100%;
                 display: block;
                
                 .textWrapInner{
                     width: 95%;
-                    margin: 0 auto;
                     height: 100%;
+                    margin-left: 0!important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    h5{
+                        margin-left: 0px!important;
+                    }
                     h3{
-                        margin-left: 50px!important;
+                        padding-left: 10px!important;
+                        position: relative;
+                        .shadowText{
+                            display: block;
+                            margin-right: 30px;
+                            
+                        }
                         span{
-                            margin-left: 10px!important;
+                            position: absolute;
+                            bottom: 6px;
+                            right:0;
                         }
                     }
                     p{
-                        margin-left: 70px!important;
+                        margin-left: 0px!important;
                         position: relative;
                         strong{
                             position: relative;
                             display: block;
                             top: 0px;
-                            left: 117px;
+                            left: 93px;
                             
                             
                            
@@ -2817,7 +2830,7 @@ body {-webkit-transform:translate3d(0,0,0);}
             }
             .textWrap:before{
                 position: absolute;
-               top: 250px;
+               top: 0px;
                left: initial!important;
                right: 5%!important;
             }
