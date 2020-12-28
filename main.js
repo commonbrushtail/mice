@@ -40,12 +40,14 @@ function setPosition(){
 
 if(document.body.clientWidth>1200){
     gsap.set('.sk-wander',{
-        top:'50%'
+        top:'50%',
+        opacity:100
     })
     
 } else {
     gsap.set('.sk-wander',{
-        top:'40%'  
+        top:'40%' ,
+        opacity:100, 
 })
 }
 

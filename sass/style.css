@@ -90,7 +90,7 @@ body {
 .loaderWrap .sk-wander {
   margin: 0 auto;
   position: absolute;
-  top: 50%;
+  opacity: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
