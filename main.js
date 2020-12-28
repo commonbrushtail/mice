@@ -489,8 +489,8 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                 
                     trigger:'.worldShadow',
-                    start: 'top center',
-                    end:'center center',
+                    start: 'center center',
+                    end:'bottom center',
                     scrub:true,
                     
                    
@@ -505,9 +505,10 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                 
                     trigger:'.travellerShadow',
-                    start: 'top center',
-                    end:'bottom center',
+                    start: 'center center',
+                    end:'bottom+=100 center',
                     scrub:true,
+                   
                    
                 }
             },"<")
@@ -519,8 +520,8 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
             
                     trigger:'.flagShadow',
-                    start: 'center center',
-                    end:'bottom top',
+                    start: 'bottom center',
+                    end:'bottom+=50 top-+50',
                     scrub:true,
                  
                
