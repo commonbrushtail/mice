@@ -754,7 +754,7 @@ window.addEventListener('load',()=>{
         }
     })
 
-
+/*
     desktopVideo.forEach(element => {
         ScrollTrigger.create({
             trigger: element,
@@ -797,6 +797,7 @@ window.addEventListener('load',()=>{
             
           });
     });
+    */
 
 
 })
