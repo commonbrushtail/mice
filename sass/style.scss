@@ -2431,7 +2431,7 @@ body {-webkit-transform:translate3d(0,0,0);}
         width: 300px;
     }
     .container .svgLine {
-        width: 500px !important;
+        width: 400px !important;
         height: 2200px;
     }
     .container .contentBox1 .textWrap {
@@ -2689,3 +2689,214 @@ body {-webkit-transform:translate3d(0,0,0);}
     }
 }
 
+
+@media(max-width:400px){
+    .container{
+        .svgLine{
+            width: 320px!important;
+        
+            .pathLine768,.pathBall768,.pathLineMobile,.pathBallMobile,.pathBall,.pathLine,.pathLine1200,.pathBall1200{
+                opacity: 0!important;
+                display: none;
+            }
+            
+            .pathBallMobile320,.pathLineMobile320{
+                opacity: 100!important;
+                display: block!important;
+            }
+        }
+        .contentBox{
+           
+            .textWrap{
+                width: 100%;
+                .textWrapInner{
+                    h5{
+                        font-size: 20px!important;
+                        margin: 0!important;
+                    }
+                    h3{
+                        font-size: 60px!important;
+                        margin: 0!important;
+                        span{
+                            font-size: 20px!important;
+                            margin: 0!important;
+                        }
+                    }
+                    
+                    p{
+                        font-size: 20px!important;
+                        margin: 0!important;
+                    }
+                    h4{
+                        font-size: 45px!important;
+                        margin: 0!important;
+                        span{
+                            font-size: 20px!important;
+                            left: 180px!important;
+                            bottom: -15px!important;
+                        }
+                    }
+    
+                }
+            }
+        }
+
+
+        .contentBox1{
+            .textWrap{
+                padding-top: 0px;
+                padding-left: 0!important;
+                align-items: center;
+                position: relative!important;
+                width: 100%;
+                display: block;
+               
+                .textWrapInner{
+                    width: 95%;
+                    margin: 0 auto;
+                    height: 100%;
+                    h3{
+                        margin-left: 50px!important;
+                        span{
+                            margin-left: 10px!important;
+                        }
+                    }
+                    p{
+                        margin-left: 70px!important;
+                        position: relative;
+                        strong{
+                            position: relative;
+                            display: block;
+                            top: 0px;
+                            left: 117px;
+                            
+                            
+                           
+
+                        }
+                    }
+                    
+                }
+            }
+            .textWrap:before{
+                position: absolute;
+               top: 250px;
+               left: initial!important;
+               right: 5%!important;
+            }
+        }
+
+        .contentBox2{
+           
+            .textWrap{
+                padding-top: 300px!important;
+                padding-left: 0!important;
+                padding-right: 0!important;
+                align-items: center;
+                position: relative!important;
+                width: 100%;
+                display: block;
+               
+               
+                .textWrapInner{
+                    width: 85%;
+                    overflow: visible;
+                    margin: 0 auto;
+                    height: 100%;
+                    display: block;
+                    margin-bottom: 100px;
+                    h5{
+                        line-height: 1;
+                    }
+                    h4{
+                        line-height: 1;
+                    }
+                    h3{
+                        margin-left: 0px!important;
+                        line-height: 1;
+                        span{
+                            margin-left: 0px!important;
+                        }
+                    }
+                    h3:after{
+                        display: block;
+                        position: relative!important;
+                        bottom: 0px!important;
+                        right:0!important ;
+                        left: 207px;
+                        font-size: 20px;
+                    }
+                    
+                }
+            }
+            .textWrap:before{
+                position: absolute;
+               top: 180px;
+               left: 8.5%!important;
+               height: 30px!important;
+               width: 100px!important;
+               background-size: contain;
+               
+              
+               
+            }
+            .textWrap:after{
+               position: absolute;
+               top: 200px;
+               width: 200px;
+               height: 200px;
+               left: 150px;
+              
+               
+            }
+        }
+        .contentBox3{
+           
+            .textWrap{
+                padding-top: 170px!important;
+                padding-left: 0!important;
+                padding-right: 0!important;
+                align-items: center;
+                position: relative!important;
+                width: 100%;
+                display: block;
+               
+               
+                .textWrapInner{
+                    width: 85%;
+                    overflow: visible;
+                    margin: 0 auto;
+                    height: 100%;
+                    display: block;
+                   
+                    h3{
+                        margin-left: 0px!important;
+                        span{
+                            margin-left: 0px!important;
+                           
+                        }
+                    }
+                    h3:after{
+                        display: block;
+                        position: relative!important;
+                        bottom: 0px!important;
+                        right:0!important ;
+                        left: 235px;
+                    }
+                    
+                }
+            }
+            .textWrap:before{
+                content: none!important;
+               
+            }
+            .textWrap:after{
+                content: none!important;
+               
+            }
+        }
+
+
+    }
+
+}

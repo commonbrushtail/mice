@@ -60,7 +60,7 @@ window.addEventListener('load',()=>{
     
     ScrollTrigger.matchMedia({
 
-        "(min-width:768px)":()=>{
+        "(min-width:401px)":()=>{
         
             gsap.fromTo('.worldShadow',{
                 opacity:0
@@ -276,7 +276,7 @@ window.addEventListener('load',()=>{
         
         
         },
-        "(min-width:987px) and (max-width:1200px)":()=>{
+        "(min-width:992px) and (max-width:1200px)":()=>{
             console.log('under 1200')
             gsap.set('.pathBall1200',{
                 motionPath:{
@@ -328,12 +328,12 @@ window.addEventListener('load',()=>{
                 // other cleanup code can go here. 
             };
         },
-        "(min-width:768px) and (max-width:986px)":()=>{
-            console.log('under 986')
-            gsap.set('.pathBall768',{
+        "(min-width:768px) and (max-width:991px)":()=>{
+            console.log('under 991')
+            gsap.set('.pathBallMobile',{
                 motionPath:{
-                    path:'.pathLine768',
-                    align:'.pathLine768',
+                    path:'.pathLineMobile',
+                    align:'.pathLineMobile',
                     alignOrigin: [0.5, 0.5],
                     start:0,
                     end:0,
@@ -358,16 +358,16 @@ window.addEventListener('load',()=>{
                 }
             })
             
-            tl.to('.pathBall768',{
+            tl.to('.pathBallMobile',{
                 duration:20,
                 motionPath:{
-                    path:'.pathLine768',
-                    align:'.pathLine768',
+                    path:'.pathLineMobile',
+                    align:'.pathLineMobile',
                     alignOrigin: [0.5, 0.5],
                 }
             })
             
-            tl.fromTo('.pathLine768',{
+            tl.fromTo('.pathLineMobile',{
                 drawSVG: '0% 0%',
                 
             },{drawSVG:'100% 0%',duration:20,},"<")
@@ -382,8 +382,8 @@ window.addEventListener('load',()=>{
                 // other cleanup code can go here. 
             };
         },
-        "(max-width:768px) and (min-width:400.1px)":()=>{
-            console.log('under768')
+        "(max-width:767px) and (min-width:400.1px)":()=>{
+            console.log('under767')
             gsap.set('.pathBallMobile',{
                 motionPath:{
                     path:'.pathLineMobile',
@@ -488,11 +488,12 @@ window.addEventListener('load',()=>{
                 opacity:'100%',
                 scrollTrigger:{
                 
-                    trigger:'.contentBox1',
-                    start: 'top bottom',
-                    end:'center bottom',
+                    trigger:'.worldShadow',
+                    start: 'top center',
+                    end:'center center',
                     scrub:true,
-                    endTrigger:".container",
+                    
+                   
                 
                 }
             },"<")
@@ -503,11 +504,11 @@ window.addEventListener('load',()=>{
                 opacity:'100%',
                 scrollTrigger:{
                 
-                    trigger:'.contentBox2',
-                    start: 'bottom bottom',
-                    end:'-120+top top',
+                    trigger:'.travellerShadow',
+                    start: 'top center',
+                    end:'bottom center',
                     scrub:true,
-                    endTrigger: ".contentBox3",
+                   
                 }
             },"<")
         
@@ -517,11 +518,12 @@ window.addEventListener('load',()=>{
                 opacity:'100%',
                 scrollTrigger:{
             
-                    trigger:'.contentBox3',
-                    start: 'bottom bottom',
-                    end:'top -450+top',
+                    trigger:'.flagShadow',
+                    start: 'center center',
+                    end:'bottom top',
                     scrub:true,
-                    endTrigger: ".contentBox3",
+                 
+               
                 }
             },"<")
         
@@ -607,6 +609,52 @@ window.addEventListener('load',()=>{
             
         }
     })
+
+    gsap.fromTo(containerBefore,
+        {
+        background: "rgb(0,255,194)",
+        background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
+        repeat:-1,
+        
+    
+        
+    },
+        {
+            background: "rgb(0,255,194)",
+            background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
+            repeat:-1,
+            duration:6,
+            ease: "none",
+            scrollTrigger:{
+                trigger:'.introBox',
+                toggleActions:"play pause resume pause"
+            }
+        }
+
+    );
+
+
+    gsap.fromTo('.section9',
+        {
+        background: "rgb(0,255,194)",
+        background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
+        repeat:-1,
+    
+        
+    },
+        {
+            background: "rgb(0,255,194)",
+            background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
+            repeat:-1,
+            duration:8,
+            ease: "none",
+            scrollTrigger:{
+                trigger:'.section9',
+                toggleActions:"play pause resume pause"
+            }
+        }
+
+    );
 
 
 
