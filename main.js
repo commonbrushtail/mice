@@ -55,7 +55,7 @@ findPosition()
 setPosition()
 
 start.addEventListener('click',()=>{
-    window.scrollTo(0,worldShadow.getBoundingClientRect().y-worldShadow.getBoundingClientRect().height)
+    window.scroll(0,worldShadow.getBoundingClientRect().y-worldShadow.getBoundingClientRect().height)
    
 })
 
