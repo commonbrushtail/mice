@@ -2418,6 +2418,8 @@ body {
     height: 100%;
   }
   .section9 {
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
     margin-top: -150px !important;
     padding: 150px 10px;
     display: -webkit-box;
