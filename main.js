@@ -608,42 +608,10 @@ window.addEventListener('load',()=>{
         }
     })
 
-    gsap.fromTo(containerBefore,
-        {
-        background: "rgb(0,255,194)",
-        background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
-        repeat:-1,
-    
-        
-    },
-        {
-            background: "rgb(0,255,194)",
-            background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
-            repeat:-1,
-            duration:6,
-            ease: "none"
-        }
-
-    );
 
 
-    gsap.fromTo('.section9',
-        {
-        background: "rgb(0,255,194)",
-        background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
-        repeat:-1,
-    
-        
-    },
-        {
-            background: "rgb(0,255,194)",
-            background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
-            repeat:-1,
-            duration:8,
-            ease: "none"
-        }
 
-    );
+
 
 })
 
