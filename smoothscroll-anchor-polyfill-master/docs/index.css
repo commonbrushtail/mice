@@ -1,0 +1,279 @@
+.smooth-scroll {
+  scroll-behavior: smooth;
+  /* Specify in custom property so polyfill can parse it */
+  --scroll-behavior: smooth;
+  /* Additionally specified in custom font-family for IE and other old browsers */
+  font-family: 'scroll-behavior:smooth';
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .smooth-scroll {
+    scroll-behavior: auto;
+    --scroll-behavior: auto;
+    font-family: "scroll-behavior: auto";
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+}
+
+main {
+  display: block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.4);
+  transition: transform 250ms ease-out;
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: -1rem;
+}
+
+header ul li {
+  margin: 1rem;
+  flex: 1 0 10rem;
+}
+
+header ul li a {
+  width: 100%;
+}
+
+header ul li:last-child {
+  white-space: nowrap;
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+header ul li:last-child a {
+  width: auto;
+  margin-left: auto;
+}
+
+header, section, .fullscreen {
+  padding: 2rem;
+}
+
+section, .fullscreen {
+  padding-top: 5rem;
+}
+
+.fullscreen h1 {
+  margin-top: 13rem;
+}
+
+.scroll-btn-spacer {
+  margin-top: 7rem;
+}
+
+@media screen and (min-height: 660px) {
+  .fullscreen h1 {
+    margin-top: 18rem;
+  }
+  .scroll-btn-spacer {
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .fullscreen h1 {
+    margin-top: 30rem;
+  }
+  .scroll-btn-spacer {
+    margin-top: 24rem;
+  }
+}
+
+html:not(.smooth-scroll) #scroll-btn button {
+  font-weight: lighter;
+}
+
+.max-width {
+  max-width: 100%;
+}
+
+.fullscreen {
+  height: 100vh;
+  text-align: center;
+}
+
+.fullscreen {
+  position: relative;
+}
+
+html:not(.flex-center) .fullscreen>div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-center .fullscreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen p {
+  width: 100%;
+}
+
+.button {
+  margin-bottom: 0;
+}
+
+section:nth-child(2) {
+  background: #faf7fc;
+}
+
+section:nth-child(3) {
+  background: #f6effa;
+}
+
+section:nth-child(4) {
+  background: #f1e7f7;
+}
+
+section:nth-child(5), footer>div {
+  background: #eddff5;
+}
+
+section:first-of-type {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.german {
+  display: none;
+}
+
+#language:checked+.german {
+  display: block;
+}
+
+#language:checked+.german+.english {
+  display: none;
+}
+
+footer>div.row {
+  flex-direction: column;
+  width: auto;
+  margin-left: 0;
+  background: #9a4eca;
+  color: #fff;
+}
+
+footer>div.row p {
+  margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 340px) {
+  /* Tighter grid in header on very small devices */
+  header ul {
+    margin: -0.5rem;
+  }
+  header ul li {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 793px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .hide-header header {
+    transform: translateY(-101%);
+  }
+}
+
+@media screen and (min-width: 794px) {
+  p {
+    max-width: 85%;
+  }
+}
+
+h1[id] span, h2[id] span, h3[id] span, h4[id] span {
+  position: relative;
+  display: inline-block;
+  transition: padding 200ms ease-out;
+  cursor: pointer;
+}
+
+h1[id] span::before, h2[id] span::before, h3[id] span::before, h4[id] span::before {
+  content: "#";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+h1[id] span:hover, h2[id] span:hover, h3[id] span:hover, h4[id] span:hover {
+  padding-left: 2rem;
+}
+
+h1[id] span:hover::before, h2[id] span:hover::before, h3[id] span:hover::before, h4[id] span:hover::before {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 517px) {
+  .allow-overflow:not(.w-450) {
+    overflow-y: hidden;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .allow-overflow.w-450 {
+    overflow-y: hidden;
+    display: block;
+  }
+}
+
+/* Add invisible padding to top of targetable elements,
+so they're not hidden under the header when scrolled to top */
+
+[id] {
+  padding-top: 90px;
+  margin-top: -90px;
+}
+
+@media screen and (max-width: 785px) {
+  [id] {
+    padding-top: 110px;
+    margin-top: -110px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  [id] {
+    padding-top: 145px;
+    margin-top: -145px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  [id] {
+    padding-top: 175px;
+    margin-top: -175px;
+  }
+}
