@@ -657,9 +657,21 @@ window.addEventListener('load',()=>{
 
     );
 
+    
 
-
-
+    var fadeUp = document.querySelectorAll('.fadeUp')
+    fadeUp.forEach(element => {
+        gsap.from(element,{
+            y:200,
+            opacity:0,
+            duration:1,
+            scrollTrigger:{
+                trigger:element,
+                markers:true,
+                start:'top bottom'
+            }
+        })
+    });
 
 
 })

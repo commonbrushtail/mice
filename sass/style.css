@@ -1071,6 +1071,7 @@ body {
 
 .section7 .lineDecoration {
   position: absolute;
+  z-index: 2;
   width: 7px;
   height: 100%;
   left: 50%;
