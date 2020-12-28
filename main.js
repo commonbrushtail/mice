@@ -660,6 +660,8 @@ window.addEventListener('load',()=>{
     
 
     var fadeUp = document.querySelectorAll('.fadeUp')
+    var fade = document.querySelectorAll('.fade')
+    var fadeText = document.querySelectorAll('.fadeText')
     fadeUp.forEach(element => {
         gsap.from(element,{
             y:200,
@@ -667,7 +669,32 @@ window.addEventListener('load',()=>{
             duration:1,
             scrollTrigger:{
                 trigger:element,
-                markers:true,
+               
+                start:'top bottom'
+            }
+        })
+    });
+    fade.forEach(element => {
+        gsap.from(element,{
+            delay:0.5,
+            opacity:0,
+            duration:1,
+            scrollTrigger:{
+                trigger:element,
+                
+                start:'top bottom'
+            }
+        })
+    });
+
+    fadeText.forEach(element => {
+        gsap.from(element,{
+            delay:0.7,
+            opacity:0,
+            duration:1,
+            scrollTrigger:{
+                trigger:element,
+              
                 start:'top bottom'
             }
         })
