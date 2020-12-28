@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="active" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +7,26 @@
     <title>The Impact Of MICE</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="sass/style.css">
-</head>
-<body
+    <link rel="stylesheet" href="SpinKit-master/spinkit.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/Export/favicon.png"/>
+    
 
->
+</head>
+<body>
 
     <div class="container">
+        <div class="loaderWrap">
+        <div class="sk-wander">
+            <div class="sk-wander-cube"></div>
+            <div class="sk-wander-cube"></div>
+            <div class="sk-wander-cube"></div>
+        </div>
+        </div>
         <div class="introBox">
-            <p data-aos="fade-up">THE IMPACT OF</p>
-            <img src="images/Export/mice_logo.svg" alt="" data-aos="fade-up" data-aos-delay="100">
-            <span data-aos="fade-up" data-aos-delay="200">มารู้จักไมซ์ไทยกันดีกว่า</span>
-            <div data-aos="fade-up" data-aos-delay="300" ><a href="">เริ่มเลย</a></div>
+            <p  class="introFade">THE IMPACT OF</p>
+            <img class="introFade" src="images/Export/mice_logo.svg" alt="">
+            <span class="introFade">มารู้จักไมซ์ไทยกันดีกว่า</span>
+            <div class="introFade "><a class="start" href="javascript:void(0);">เริ่มเลย</a></div>
         </div>
         <svg  class="svgLine" xmlns="http://www.w3.org/2000/svg" width="1149.995" height="3053.513" viewBox="0 0 1149.995 2953.513">
           
@@ -178,27 +187,27 @@
         <h3><span>รายได้นับแสนล้านบาท<span>ที่อุตสาหกรรมไมซ์</span><br> <span>สร้างให้ไทยขับเคลื่อนด้วย</span></h3>
         <h2>ประเภทการ<span>จัดงาน 5 กลุ่ม</span></h2>
         <div class="miceWrap">
-            <div class="miceItem">
+            <div class="miceItem stagFade">
                 <img src="images/Export/Meetings_logo-.svg" alt="">
                 <h4>Meetings</h4>
                 <p>การประชุมองค์กร <br> ระดับนานาชาติ</p>
             </div>
-            <div class="miceItem">
+            <div class="miceItem stagFade">
                 <img src="images/Export/Incentives_logo.svg" alt="">
                 <h4>INCENTIVES</h4>
                 <p>การเดินทางเพื่อเป็น <br> รางวัลระดับนานาชาติ</p>
             </div>
-            <div class="miceItem" >
+            <div class="miceItem stagFade" >
                 <img src="images/Export/Conventions_logo.svg" alt="">
                 <h4>CONVENTIONS</h4>
                 <p>การประชุมวิชาชีพ<br>ระดับนานาชาติ</p>
             </div>
-            <div class="miceItem" >
+            <div class="miceItem stagFade" >
                 <img src="images/Export/Exhibitions_logo.svg" alt="">
                 <h4>EXHIBITIONS</h4>
                 <p>นิทรรศการ <br> ระดับนานาชาติ</p>
             </div>
-            <div class="miceItem" >
+            <div class="miceItem stagFade" >
                 <img src="images/Export/Mega Event_logo.svg" alt="">
                 <h4>MEGA EVENT</h4>
                 <p>มหกรรม</p>
@@ -397,16 +406,16 @@
     <div class="section9 ver-center">
         <div class=" ">
             <img class="worldIcon" src="images/Export/world_icon_footer.svg" alt="">
-            <h2>เมื่อใดที่โลก<br>พ้นจากวิกฤตไวรัส Covid-19</h2>
-            <h3>
+            <h2 class="fade">เมื่อใดที่โลก<br>พ้นจากวิกฤตไวรัส Covid-19</h2>
+            <h3 class="fade">
                 อุตสาหกรรมไมซ์ไทยที่สั่งสมต้นทุน
                 ที่แข็งแกร่งไว้จะกลับมาช่วยฟื้นฟู
                 เศรษฐกิจไทยให้เติบโตอย่างรวดเร็ว
                 ได้อย่างแน่นอน
             </h3>
-            <img class="footerLogo" src="images/Export/mice_logo.svg" alt="">
+            <img class="footerLogo fadeUp" src="images/Export/mice_logo.svg" alt="">
             <h4>แชร์</h4>
-            <div class="shareWrap">
+            <div class="shareWrap fade">
 
                 <a href="http://twitter.com/share?url=http://www.example.com&text=The Impact Of MICE&hashtags=TheImpactOfMICE" target="_blank"><img src="images/Export/Twitter_icon.svg" alt=""></a>
 
@@ -425,6 +434,7 @@
     
     <script src="gsap/gsap.min.js"></script>
     <script src="gsap/ScrollTrigger.min.js"></script>
+    <script src="gsap/ScrollToPlugin.min.js"></script>
     <script src="gsap/DrawSVGPlugin.min.js"></script>
     <script src="gsap/MotionPathPlugin.min.js"></script>
     <script src="gsap/MotionPathHelper.min.js"></script>

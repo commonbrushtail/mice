@@ -1,5 +1,5 @@
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin,MorphSVGPlugin,CSSRulePlugin,ScrambleTextPlugin);
-
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin,MorphSVGPlugin,CSSRulePlugin,ScrambleTextPlugin,ScrollToPlugin);
+var introFade = document.querySelectorAll('.introFade')
 var containerBefore = CSSRulePlugin.getRule(".container:before"); //get the rule
 var section2InnerBefore = CSSRulePlugin.getRule(".section2Inner:before"); //get the rule
 var section2After = CSSRulePlugin.getRule(".section2:after"); //get the rule
@@ -10,7 +10,10 @@ var worldShadow = document.querySelector(".worldShadow"),
     worldShadowTop,
     travellerShadowTop, 
     flagShadowShadowTop; 
-    
+
+var html = document.documentElement
+var start = document.querySelector('.start')
+console.log(start)
 
 
 function findPosition(){
@@ -35,13 +38,28 @@ function setPosition(){
     })
 }
 
+if(document.body.clientWidth>1200){
+    gsap.set('.sk-wander',{
+        top:'50%'
+    })
+    
+} else {
+    gsap.set('.sk-wander',{
+        top:'40%'  
+})
+}
 
 
 
 findPosition()
 setPosition()
 
-    
+start.addEventListener('click',()=>{
+    window.scrollTo(0,worldShadow.getBoundingClientRect().y-worldShadow.getBoundingClientRect().height)
+   
+})
+
+console.log( window.innerHeight)
 
 window.addEventListener('resize',()=>{
     findPosition()
@@ -53,11 +71,37 @@ window.addEventListener('load',()=>{
     
     
     MorphSVGPlugin.convertToPath('.pathBall') 
-    gsap.set('.svgLine,.contentBox',{
-        visibility:'visible'
+    var intro = gsap.timeline()
+    
+    
+    intro.set('.svgLine,.contentBox,.introFade',{
+        visibility:'visible',
+        delay:1,
     })
 
+    intro.to('.loaderWrap',{opacity:0,duration:0.5})
     
+  
+    intro.from('.introFade',{
+        y:100,
+        opacity:0,
+        stagger:0.1,
+        duration:1
+    })
+
+    intro.from('.svgLine',{
+        opacity:0,
+        y:100,
+        },'<')
+
+    intro.from('.contentBox1',{
+            opacity:0,
+            duration:1,
+            },'<')
+
+    intro.to(html,{
+        overflow:'visible',
+    })
     ScrollTrigger.matchMedia({
 
         "(min-width:401px)":()=>{
@@ -543,14 +587,6 @@ window.addEventListener('load',()=>{
         
 
     })
-
-
-
-
-
-
-
-
     var section2tl = gsap.timeline()
     section2tl.to('.section2InnerDeco',{
         
@@ -662,9 +698,10 @@ window.addEventListener('load',()=>{
     var fadeUp = document.querySelectorAll('.fadeUp')
     var fade = document.querySelectorAll('.fade')
     var fadeText = document.querySelectorAll('.fadeText')
+    var stagFade = document.querySelectorAll('.stagFade')
     fadeUp.forEach(element => {
         gsap.from(element,{
-            y:200,
+            y:150,
             opacity:0,
             duration:1,
             scrollTrigger:{
@@ -699,7 +736,17 @@ window.addEventListener('load',()=>{
             }
         })
     });
-
+    gsap.from('.stagFade',{
+        y:100,
+        stagger: 0.15,
+        opacity:0,
+        duration:1,
+        scrollTrigger:{
+            trigger:'.stagFade',
+            
+            start:'top bottom'
+        }
+    })
 
 })
 
