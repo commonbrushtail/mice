@@ -1055,14 +1055,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
+  color: #00FFC2;
   margin: 0 auto;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(#00ffc2), color-stop(0%, #06f3c4), color-stop(0%, #18d3cc), to(#349fd8));
-  -webkit-mask-image: linear-gradient(0deg, #00ffc2 0%, #06f3c4 0%, #18d3cc 0%, #349fd8 100%);
   background-image: -webkit-gradient(linear, left bottom, left top, from(#00ffc2), color-stop(0%, #06f3c4), color-stop(0%, #18d3cc), to(#349fd8));
   background-image: linear-gradient(0deg, #00ffc2 0%, #06f3c4 0%, #18d3cc 0%, #349fd8 100%);
 }
@@ -1086,14 +1083,12 @@ body {
   font-family: kanit-regular;
   font-size: 85px;
   line-height: 1.4;
-  display: inline-block;
 }
 
 .section7 .mainText .textItem h4 {
   font-family: kanit-regular;
   font-size: 50px;
   line-height: 1.4;
-  display: inline-block;
 }
 
 .section7 .mainText .textItem2 {

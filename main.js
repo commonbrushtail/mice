@@ -55,7 +55,7 @@ findPosition()
 setPosition()
 
 start.addEventListener('click',()=>{
-    window.scroll(0,worldShadow.getBoundingClientRect().y-worldShadow.getBoundingClientRect().height)
+    gsap.to(window, {duration: 0, scrollTo: {y: '.worldShadow', autoKill: false,offsetY: 400}, ease: "power2"});
    
 })
 
