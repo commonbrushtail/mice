@@ -1,5 +1,7 @@
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, DrawSVGPlugin,MorphSVGPlugin,CSSRulePlugin,ScrambleTextPlugin,ScrollToPlugin);
 var introFade = document.querySelectorAll('.introFade')
+var desktopVideo = document.querySelectorAll('.desktopVideo')
+var mobileVideo = document.querySelectorAll('.mobileVideo')
 var containerBefore = CSSRulePlugin.getRule(".container:before"); //get the rule
 var section2InnerBefore = CSSRulePlugin.getRule(".section2Inner:before"); //get the rule
 var section2After = CSSRulePlugin.getRule(".section2:after"); //get the rule
@@ -13,7 +15,8 @@ var worldShadow = document.querySelector(".worldShadow"),
 
 var html = document.documentElement
 var start = document.querySelector('.start')
-console.log(start)
+
+
 
 
 function findPosition(){
@@ -57,7 +60,8 @@ findPosition()
 setPosition()
 
 start.addEventListener('click',()=>{
-    gsap.to(window, {duration: 0, scrollTo: {y: '.contentBox1', autoKill: false,offsetY: 400}, ease: "power2"});
+    /*gsap.to(window, {duration: 0, scrollTo: {y: '.contentBox1', autoKill: false,offsetY: 400}, ease: "power2"});*/
+    window.scroll({top:  worldShadow.getBoundingClientRect().y + window.scrollY, left: 0, behavior: 'smooth' });
    
 })
 
@@ -750,7 +754,55 @@ window.addEventListener('load',()=>{
         }
     })
 
+
+    desktopVideo.forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            start: "center bottom",
+            
+            end: "bottom center",
+            
+            onEnter:()=>{
+                if(element.played.length===0){
+                    element.play();
+                } else {
+                    element.pause();
+                }
+            
+            
+            },
+            toggleActions: "play none none none",
+            
+            
+          });
+    });
+    mobileVideo.forEach(element => {
+        ScrollTrigger.create({
+            trigger: element,
+            start: "center bottom",
+           
+            end: "bottom center",
+            
+            onEnter:()=>{
+                if(element.played.length===0){
+                    element.play();
+                } else {
+                    element.pause();
+                }
+            
+            
+            },
+            toggleActions: "play none none none",
+            
+            
+          });
+    });
+
+
 })
+
+
+
 
 
 
