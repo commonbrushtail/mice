@@ -571,8 +571,8 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
             
                     trigger:'.contentBox3',
-                    start: 'center bottom',
-                    end:'top top',
+                    start: 'top bottom',
+                    end:'30px top',
                     scrub:true,
                     endTrigger: ".contentBox3",
                 
@@ -717,7 +717,7 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                     trigger:'.section2Inner',
                     start:"top bottom",
-                    markers:true,
+              
                     end:'30px +240+center',
                     scrub:true,
                 
@@ -828,7 +828,7 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
             
                     trigger:'.flagShadow',
-                    start: 'bottom center',
+                    start: 'top center',
                     end:'bottom+=50 top-+50',
                     scrub:true,
                  
@@ -847,8 +847,8 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                     trigger:'.section2Inner',
                     start:"top bottom",
-                 
-                    end:'30px +240+center',
+                  
+                    end:'30px center',
                     scrub:true,
                 
                 }
