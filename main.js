@@ -28,7 +28,7 @@ function checkVideo(){
             source.setAttribute('src', `video/video${index+1}.mp4`);
             source.setAttribute('type', 'video/mp4');
             videoResponsive[index].appendChild(source)
-            videoResponsive[index].load()
+            
         }
     }  else if(document.body.clientWidth <= 767){
         for (let index = 0; index < videoResponsive.length; index++) {
@@ -37,7 +37,7 @@ function checkVideo(){
             source.setAttribute('src', `video/Mobile/video${index+1}.mp4`);
             source.setAttribute('type', 'video/mp4');
             videoResponsive[index].appendChild(source)
-            videoResponsive[index].load()
+            
             
         }
     }
