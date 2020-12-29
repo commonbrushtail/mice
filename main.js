@@ -728,7 +728,7 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                     trigger:'.section2Inner',
                     start:"+250+top bottom",
-                    markers:true,
+                    
                     end:'100px +250+bottom',
                     scrub:true,
                 

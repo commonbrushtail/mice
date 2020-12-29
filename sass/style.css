@@ -1419,8 +1419,8 @@ body {
     display: block !important;
   }
   .container .svgLine .decoration1 {
-    -webkit-transform: translate(-190px, -1800px) !important;
-            transform: translate(-190px, -1800px) !important;
+    -webkit-transform: translate(-171px, -1800px) !important;
+            transform: translate(-171px, -1800px) !important;
   }
   .container .svgLine .decoration2 {
     -webkit-transform: translate(-190px, -1800px) !important;
@@ -1517,8 +1517,8 @@ body {
             transform: translate(197px, 2575px) scale(1) !important;
   }
   .container .svgLine .decoration1, .container .svgLine .decoration2 {
-    -webkit-transform: translate(-170px, -800px) !important;
-            transform: translate(-170px, -800px) !important;
+    -webkit-transform: translate(-124px, -800px) !important;
+            transform: translate(-124px, -800px) !important;
   }
   .container .contentBox .textWrap {
     width: 100%;
@@ -2926,8 +2926,8 @@ body {
             transform: translate(215px, 2453px) scale(1) !important;
   }
   .container .svgLine .decoration1, .container .svgLine .decoration2 {
-    -webkit-transform: translate(-170px, -380px) !important;
-            transform: translate(-170px, -380px) !important;
+    -webkit-transform: translate(-125px, -380px) !important;
+            transform: translate(-125px, -380px) !important;
   }
   .container .contentBox .textWrap {
     width: 100%;
