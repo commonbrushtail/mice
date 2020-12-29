@@ -97,6 +97,7 @@ window.addEventListener('resize',()=>{
 
     findPosition()
     setPosition()
+    /*
     if( window.innerWidth != w || window.innerHeight !=h){
         console.log('asdsd')
         checkVideo()
@@ -104,6 +105,7 @@ window.addEventListener('resize',()=>{
         w = window.clientWidth
         h = window.clientHeight
     }
+    */
     
 });
 
@@ -822,6 +824,7 @@ window.addEventListener('load',()=>{
             trigger: element,
             start: "center bottom",
           
+
             end: "bottom center",
             
             onEnter:()=>{
