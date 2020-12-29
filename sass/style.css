@@ -70,6 +70,10 @@ body {
   width: 100%;
 }
 
+.noWrap {
+  white-space: nowrap;
+}
+
 body {
   -webkit-transform: translate3d(0, 0, 0);
 }
