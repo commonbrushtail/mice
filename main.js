@@ -157,6 +157,54 @@ window.addEventListener('load',()=>{
             },"<")
 
         },
+        "(min-width:200px) and (max-width:767px)":()=>{
+            gsap.fromTo(containerBefore,
+                {
+                background: "rgb(0,255,194)",
+                background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(66,134,222,1) 59%, rgba(137,6,252,1) 100%)",
+                repeat:-1,
+                
+            
+                
+            },
+                {
+                    background: "rgb(0,255,194)",
+                    background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(66,134,222,1) 59%, rgba(137,6,252,1) 100%)",
+                    repeat:-1,
+                    duration:5,
+                    ease: "none",
+                    scrollTrigger:{
+                        trigger:'.introBox',
+                        toggleActions:"play pause resume pause"
+                    }
+                }
+        
+            ); 
+        },
+        "(min-width:768px)":()=>{
+            gsap.fromTo(containerBefore,
+                {
+                background: "rgb(0,255,194)",
+                background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(66,134,222,1) 59%, rgba(137,6,252,1) 100%)",
+                repeat:-1,
+                
+            
+                
+            },
+                {
+                    background: "rgb(0,255,194)",
+                    background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(66,134,222,1) 59%, rgba(137,6,252,1) 100%)",
+                    repeat:-1,
+                    duration:5,
+                    ease: "none",
+                    scrollTrigger:{
+                        trigger:'.introBox',
+                        toggleActions:"play pause resume pause"
+                    }
+                }
+        
+            ); 
+        },
         "(min-width:1921px)" :()=>{
             console.log('4k')
         /*for 1080p screen*/
@@ -653,28 +701,7 @@ window.addEventListener('load',()=>{
         }
     })
 
-    gsap.fromTo(containerBefore,
-        {
-        background: "rgb(0,255,194)",
-        background: "linear-gradient(0deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
-        repeat:-1,
-        
-    
-        
-    },
-        {
-            background: "rgb(0,255,194)",
-            background: "linear-gradient(360deg, rgba(0,255,194,1) 0%, rgba(4,246,195,1) 12%, rgba(17,223,201,1) 24%, rgba(37,186,209,1) 39%, rgba(66,134,222,1) 59%, rgba(102,69,237,1) 80%, rgba(137,6,252,1) 100%)",
-            repeat:-1,
-            duration:10,
-            ease: "none",
-            scrollTrigger:{
-                trigger:'.introBox',
-                toggleActions:"play pause resume pause"
-            }
-        }
-
-    );
+   
 
 
     gsap.fromTo('.section9',
