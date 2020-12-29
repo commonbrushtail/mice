@@ -15,6 +15,8 @@ var worldShadow = document.querySelector(".worldShadow"),
 
 var html = document.documentElement
 var start = document.querySelector('.start')
+var w = window.clientWidth;
+var h = window.clientHeight;
 
 var videoResponsive = document.querySelectorAll('.videoResponsive')
 
@@ -26,7 +28,7 @@ function checkVideo(){
             source.setAttribute('src', `video/video${index+1}.mp4`);
             source.setAttribute('type', 'video/mp4');
             videoResponsive[index].appendChild(source)
-            
+            videoResponsive[index].load()
         }
     }  else if(document.body.clientWidth <= 767){
         for (let index = 0; index < videoResponsive.length; index++) {
@@ -35,6 +37,7 @@ function checkVideo(){
             source.setAttribute('src', `video/Mobile/video${index+1}.mp4`);
             source.setAttribute('type', 'video/mp4');
             videoResponsive[index].appendChild(source)
+            videoResponsive[index].load()
             
         }
     }
@@ -91,9 +94,16 @@ start.addEventListener('click',()=>{
 console.log( window.innerHeight)
 
 window.addEventListener('resize',()=>{
+
     findPosition()
     setPosition()
-    checkVideo()
+    if( window.innerWidth != w || window.innerHeight !=h){
+        console.log('asdsd')
+        checkVideo()
+
+        w = window.clientWidth
+        h = window.clientHeight
+    }
     
 });
 
@@ -811,7 +821,7 @@ window.addEventListener('load',()=>{
         ScrollTrigger.create({
             trigger: element,
             start: "center bottom",
-            markers:true,
+          
             end: "bottom center",
             
             onEnter:()=>{
