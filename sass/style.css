@@ -78,6 +78,10 @@ body {
   visibility: hidden;
 }
 
+.wordSpacing {
+  word-spacing: -5px;
+}
+
 .loaderWrap {
   position: fixed;
   top: 0;

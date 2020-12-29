@@ -16,25 +16,25 @@ var worldShadow = document.querySelector(".worldShadow"),
 var html = document.documentElement
 var start = document.querySelector('.start')
 
-var videoResonsive = document.querySelectorAll('.videoResponsive')
-console.log(videoResonsive)
+var videoResponsive = document.querySelectorAll('.videoResponsive')
+
 function checkVideo(){
     if(document.body.clientWidth>768){
-        for (let index = 0; index < videoResonsive.length; index++) {
-            videoResonsive[index].removeChild(videoResonsive[index].firstChild);
+        for (let index = 0; index < videoResponsive.length; index++) {
+            videoResponsive[index].removeChild(videoResponsive[index].firstChild);
             var source = document.createElement('source'); 
             source.setAttribute('src', `video/video${index+1}.mp4`);
             source.setAttribute('type', 'video/mp4');
-            videoResonsive[index].appendChild(source)
+            videoResponsive[index].appendChild(source)
             
         }
     }  else if(document.body.clientWidth <= 767){
-        for (let index = 0; index < videoResonsive.length; index++) {
-            videoResonsive[index].removeChild(videoResonsive[index].firstChild);
+        for (let index = 0; index < videoResponsive.length; index++) {
+            videoResponsive[index].removeChild(videoResponsive[index].firstChild);
             var source = document.createElement('source'); 
             source.setAttribute('src', `video/Mobile/video${index+1}.mp4`);
             source.setAttribute('type', 'video/mp4');
-            videoResonsive[index].appendChild(source)
+            videoResponsive[index].appendChild(source)
             
         }
     }
@@ -806,12 +806,12 @@ window.addEventListener('load',()=>{
         }
     })
 
-/*
-    desktopVideo.forEach(element => {
+
+    videoResponsive.forEach(element => {
         ScrollTrigger.create({
             trigger: element,
             start: "center bottom",
-            
+            markers:true,
             end: "bottom center",
             
             onEnter:()=>{
@@ -828,28 +828,8 @@ window.addEventListener('load',()=>{
             
           });
     });
-    mobileVideo.forEach(element => {
-        ScrollTrigger.create({
-            trigger: element,
-            start: "center bottom",
-           
-            end: "bottom center",
-            
-            onEnter:()=>{
-                if(element.played.length===0){
-                    element.play();
-                } else {
-                    element.pause();
-                }
-            
-            
-            },
-            toggleActions: "play none none none",
-            
-            
-          });
-    });
-    */
+ 
+ 
 
 
 })
