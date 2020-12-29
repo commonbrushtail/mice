@@ -1513,8 +1513,8 @@ body {
             transform: translate(296px, 563px) scale(1.4) !important;
   }
   .container .svgLine .flagShadow {
-    -webkit-transform: translate(188px, 2094px) scale(1.1) !important;
-            transform: translate(188px, 2094px) scale(1.1) !important;
+    -webkit-transform: translate(197px, 2575px) scale(1) !important;
+            transform: translate(197px, 2575px) scale(1) !important;
   }
   .container .svgLine .decoration1, .container .svgLine .decoration2 {
     -webkit-transform: translate(-170px, -800px) !important;
@@ -2780,6 +2780,9 @@ body {
   .section8 .section8Inner .lineDescription .lineItemWrap p {
     font-size: 18px;
   }
+  .section8 .section8Inner .lineDescription .lineItemWrap p br {
+    display: none;
+  }
   .section9 {
     padding-left: 25px;
     padding-right: 25px;
@@ -2858,6 +2861,44 @@ body {
   }
   .section4 .miceWrap {
     width: 90%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+        grid-template-areas: "miceItem1 miceItem1 miceItem2 miceItem2" "miceItem3 miceItem3 miceItem4 miceItem4" ". miceItem5 miceItem5 .";
+  }
+  .section4 .miceWrap .miceItem1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: miceItem1;
+  }
+  .section4 .miceWrap .miceItem2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: miceItem2;
+  }
+  .section4 .miceWrap .miceItem3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: miceItem3;
+  }
+  .section4 .miceWrap .miceItem4 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: miceItem4;
+  }
+  .section4 .miceWrap .miceItem5 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: miceItem5;
   }
   .section7 .mainText .textItem h4 {
     font-size: 20px;
@@ -2879,6 +2920,14 @@ body {
   .container .svgLine .pathBallMobile320, .container .svgLine .pathLineMobile320 {
     opacity: 100 !important;
     display: block !important;
+  }
+  .container .svgLine .flagShadow {
+    -webkit-transform: translate(215px, 2453px) scale(1) !important;
+            transform: translate(215px, 2453px) scale(1) !important;
+  }
+  .container .svgLine .decoration1, .container .svgLine .decoration2 {
+    -webkit-transform: translate(-170px, -380px) !important;
+            transform: translate(-170px, -380px) !important;
   }
   .container .contentBox .textWrap {
     width: 100%;

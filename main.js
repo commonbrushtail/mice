@@ -706,19 +706,44 @@ window.addEventListener('load',()=>{
         }
     },'<')
 
-    section2tl.to('.count', {
+    gsap.to('.count', {
         ease:'none',duration:2, 
         scrambleText:{text:"212,837", chars:"0123456789",speed:1,},
         scrollTrigger:{
-            trigger:'.section2Inner',
-            start:"top-=400 center",
-        
-            end:'150px +240+center',
-            scrub:true,
+            trigger:'.count',
+            start:"bottom bottom",
+           
+            
             
         
         }
-    },'<')
+    })
+
+    gsap.to('.count2', {
+        ease:'none',duration:1, 
+        scrambleText:{text:"173,114.04", chars:"0123456789",speed:1,},
+        scrollTrigger:{
+            trigger:'.count2',
+            start:"bottom bottom",
+           
+            
+            
+        
+        }
+    })
+
+    gsap.to('.count3', {
+        ease:'none',duration:1, 
+        scrambleText:{text:"39,722.96", chars:"0123456789",speed:1,},
+        scrollTrigger:{
+            trigger:'.count3',
+            start:"bottom bottom",
+           
+            
+            
+        
+        }
+    })
 
 
 
@@ -824,18 +849,17 @@ window.addEventListener('load',()=>{
             trigger: element,
             start: "center bottom",
           
-
-            end: "bottom center",
             
             onEnter:()=>{
                 if(element.played.length===0){
                     element.play();
-                } else {
-                    element.pause();
-                }
+                } 
             
             
             },
+
+
+            
             toggleActions: "play none none none",
             
             
@@ -855,8 +879,8 @@ window.addEventListener('load',()=>{
 
 
 
-
 /*
+
 MotionPathHelper.create(".pathBallMobile",{
   path: ".pathLineMobile",
   pathWidth: 5,

@@ -1403,7 +1403,7 @@ body {-webkit-transform:translate3d(0,0,0);}
                  transform: translate(296px,563px)scale(1.4)!important; 
              }
              .flagShadow{
-             transform: translate(188px,2094px) scale(1.1)!important;
+             transform: translate(197px,2575px) scale(1)!important;
              }
              .decoration1,.decoration2{
                  transform: translate(-170px,-800px)!important;
@@ -2598,6 +2598,8 @@ body {-webkit-transform:translate3d(0,0,0);}
     .section4 .miceWrap .miceItem {
         margin-top: 20px;
     }
+
+    
     .section6 #canvas {
         height: 700px;
     }
@@ -2647,6 +2649,9 @@ body {-webkit-transform:translate3d(0,0,0);}
     }
     .section8 .section8Inner .lineDescription .lineItemWrap p {
         font-size: 18px;
+    }
+    .section8 .section8Inner .lineDescription .lineItemWrap p br {
+        display: none;
     }
     .section9 {
         padding-left: 25px;
@@ -2727,6 +2732,21 @@ body {-webkit-transform:translate3d(0,0,0);}
     }
     .section4 .miceWrap {
         width: 90%;
+        
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                "miceItem1 miceItem1 miceItem2 miceItem2"
+                "miceItem3 miceItem3 miceItem4 miceItem4"
+                ". miceItem5 miceItem5 ."; 
+                .miceItem1 { grid-area: miceItem1; }
+                .miceItem2 { grid-area: miceItem2; }
+                .miceItem3 { grid-area: miceItem3; }
+                .miceItem4 { grid-area: miceItem4; }
+                .miceItem5 { grid-area: miceItem5; }
+        
     }
     .section7 .mainText .textItem h4 {
         font-size: 20px;
@@ -2751,6 +2771,13 @@ body {-webkit-transform:translate3d(0,0,0);}
             .pathBallMobile320,.pathLineMobile320{
                 opacity: 100!important;
                 display: block!important;
+            }
+
+            .flagShadow{
+                transform: translate(215px,2453px) scale(1)!important;
+            }
+            .decoration1,.decoration2{
+                transform: translate(-170px,-380px)!important;
             }
         }
         .contentBox{
