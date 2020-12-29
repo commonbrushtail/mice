@@ -146,7 +146,7 @@ window.addEventListener('load',()=>{
     })
     ScrollTrigger.matchMedia({
 
-        "(min-width:401px)":()=>{
+        "(min-width:992px)":()=>{
         
             gsap.fromTo('.worldShadow',{
                 opacity:0
@@ -191,6 +191,35 @@ window.addEventListener('load',()=>{
                 
                 }
             },"<")
+
+            var section2tl = gsap.timeline()
+            section2tl.to('.section2InnerDeco',{
+                
+                scale:1,
+                
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+                y:0,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"top center",
+                
+                    end:'50px +240+center',
+                    scrub:true,
+                
+                }
+            })
+            section2tl.to('.section2Inner .textWrap',{
+                opacity:1,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"top center",
+                
+                    end:'120px +240+center',
+                    scrub:true,
+                
+                }
+            },'<')
 
         },
         "(min-width:200px) and (max-width:767px)":()=>{
@@ -483,7 +512,7 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                 
                     trigger:'.contentBox1',
-                    start: 'bottom bottom',
+                    start: 'top bottom',
                     end:'bottom-=300 top',
                     scrub:true,
                     endTrigger:".container",
@@ -505,6 +534,79 @@ window.addEventListener('load',()=>{
                 drawSVG: '0% 0%',
                 
             },{drawSVG:'100% 0%',duration:20,},"<")
+
+            gsap.fromTo('.worldShadow',{
+                opacity:0
+            },{
+                opacity:'100%',
+                scrollTrigger:{
+                
+                    trigger:'.contentBox1',
+                    start: 'top bottom',
+                    end:'top top',
+                    scrub:true,
+                    endTrigger: ".contentBox2",
+                }
+            },"<")
+        
+            gsap.fromTo('.travellerShadow',{
+                opacity:0
+            },{
+                opacity:'100%',
+                scrollTrigger:{
+                
+                    trigger:'.contentBox2',
+                    start: 'top bottom',
+                    end:'bottom top',
+                    scrub:true,
+                    endTrigger: ".contentBox3",
+                    
+                }
+            },"<")
+        
+            gsap.fromTo('.flagShadow',{
+                opacity:0
+            },{
+                opacity:'100%',
+                scrollTrigger:{
+            
+                    trigger:'.contentBox3',
+                    start: 'center bottom',
+                    end:'top top',
+                    scrub:true,
+                    endTrigger: ".contentBox3",
+                
+                }
+            },"<")
+
+            var section2tl = gsap.timeline()
+            section2tl.to('.section2InnerDeco',{
+                
+                scale:1,
+                
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+                y:0,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"+100+top bottom",
+                
+                    end:'50px +240+center',
+                    scrub:true,
+                
+                }
+            })
+            section2tl.to('.section2Inner .textWrap',{
+                opacity:1,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"top center",
+                
+                    end:'120px +240+center',
+                    scrub:true,
+                
+                }
+            },'<')
             
         
         
@@ -537,7 +639,7 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                 
                     trigger:'.contentBox1',
-                    start: 'bottom bottom',
+                    start: '-150+top bottom',
                     end:'bottom-=300 top',
                     scrub:true,
                     endTrigger:".container",
@@ -559,7 +661,79 @@ window.addEventListener('load',()=>{
                 drawSVG: '0% 0%',
                 
             },{drawSVG:'100% 0%',duration:20,},"<")
+
+            gsap.fromTo('.worldShadow',{
+                opacity:0
+            },{
+                opacity:'100%',
+                scrollTrigger:{
+                
+                    trigger:'.contentBox1',
+                    start: '-150+top bottom',
+                    end:'top top',
+                    scrub:true,
+                    endTrigger: ".contentBox2",
+                }
+            },"<")
+        
+            gsap.fromTo('.travellerShadow',{
+                opacity:0
+            },{
+                opacity:'100%',
+                scrollTrigger:{
+                
+                    trigger:'.contentBox2',
+                    start: 'top bottom',
+                    end:'bottom top',
+                    scrub:true,
+                    endTrigger: ".contentBox3",
+                    
+                }
+            },"<")
+        
+            gsap.fromTo('.flagShadow',{
+                opacity:0
+            },{
+                opacity:'100%',
+                scrollTrigger:{
             
+                    trigger:'.contentBox3',
+                    start: 'center bottom',
+                    end:'top top',
+                    scrub:true,
+                    endTrigger: ".contentBox3",
+                
+                }
+            },"<")
+            
+            var section2tl = gsap.timeline()
+            section2tl.to('.section2InnerDeco',{
+                
+                scale:1,
+                
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+                y:0,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"top bottom",
+                    markers:true,
+                    end:'30px +240+center',
+                    scrub:true,
+                
+                }
+            })
+            section2tl.to('.section2Inner .textWrap',{
+                opacity:1,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"top center",
+                
+                    end:'120px +240+center',
+                    scrub:true,
+                
+                }
+            },'<')
         
         
         
@@ -591,7 +765,7 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                 
                     trigger:'.contentBox1',
-                    start: 'bottom bottom',
+                    start: '-150+top bottom',
                     end:'bottom-=300 top',
                     scrub:true,
                     endTrigger:".container",
@@ -623,7 +797,7 @@ window.addEventListener('load',()=>{
                 scrollTrigger:{
                 
                     trigger:'.worldShadow',
-                    start: 'center center',
+                    start: 'top bottom',
                     end:'bottom center',
                     scrub:true,
                     
@@ -661,6 +835,36 @@ window.addEventListener('load',()=>{
                
                 }
             },"<")
+
+            var section2tl = gsap.timeline()
+            section2tl.to('.section2InnerDeco',{
+                
+                scale:1,
+                
+                borderBottomLeftRadius: 0,
+                borderBottomRightRadius: 0,
+                y:0,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"top bottom",
+                 
+                    end:'30px +240+center',
+                    scrub:true,
+                
+                }
+            })
+            section2tl.to('.section2Inner .textWrap',{
+                opacity:1,
+                scrollTrigger:{
+                    trigger:'.section2Inner',
+                    start:"top center",
+                
+                    end:'120px +240+center',
+                    scrub:true,
+                
+                }
+            },'<')
+        
         
             
             return function() {
@@ -677,34 +881,7 @@ window.addEventListener('load',()=>{
         
 
     })
-    var section2tl = gsap.timeline()
-    section2tl.to('.section2InnerDeco',{
-        
-        scale:1,
-        
-        borderBottomLeftRadius: 0,
-        borderBottomRightRadius: 0,
-        y:0,
-        scrollTrigger:{
-            trigger:'.section2Inner',
-            start:"top center",
-        
-            end:'50px +240+center',
-            scrub:true,
-        
-        }
-    })
-    section2tl.to('.section2Inner .textWrap',{
-        opacity:1,
-        scrollTrigger:{
-            trigger:'.section2Inner',
-            start:"top center",
-        
-            end:'120px +240+center',
-            scrub:true,
-        
-        }
-    },'<')
+   
 
     gsap.to('.count', {
         ease:'none',duration:2, 
