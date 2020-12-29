@@ -727,9 +727,9 @@ window.addEventListener('load',()=>{
                 opacity:1,
                 scrollTrigger:{
                     trigger:'.section2Inner',
-                    start:"top center",
-                
-                    end:'120px +240+center',
+                    start:"+250+top bottom",
+                    markers:true,
+                    end:'100px +250+bottom',
                     scrub:true,
                 
                 }
@@ -857,9 +857,8 @@ window.addEventListener('load',()=>{
                 opacity:1,
                 scrollTrigger:{
                     trigger:'.section2Inner',
-                    start:"top center",
-                
-                    end:'120px +240+center',
+                    start:"+100+top bottom",
+                    end:'+300+top center',
                     scrub:true,
                 
                 }
